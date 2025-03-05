@@ -1,2 +1,2 @@
-Trigger:S3 - S3 Valudation bucket
+Trigger:S3 - S3 Validation bucket
 Layer: AWSSDKPandas-Python312

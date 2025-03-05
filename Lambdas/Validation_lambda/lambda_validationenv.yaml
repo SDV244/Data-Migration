@@ -1,5 +1,0 @@
-LOGS_TABLE: "nmexbd-nonprod_validation_logs"
-SCHEMA_TABLE: "nmexbd-nonprod_reference_schema_table"
-SOURCE_BUCKET: "nissan-nmex-nmexbd-nonprod-validation-map-us-east-1"
-TARGET_BUCKET: ""
-api_gateway_url: ""

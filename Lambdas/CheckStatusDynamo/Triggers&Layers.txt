@@ -1,0 +1,2 @@
+Trigger:Dynamo DB - Validation Logs
+Layer: No

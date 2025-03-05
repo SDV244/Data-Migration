@@ -1,0 +1,2 @@
+Trigger: API Gateway - restAPI
+Layer: No

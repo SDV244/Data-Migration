@@ -1,0 +1,2 @@
+Trigger:API Gateway - WebsocketAPI
+Layer: No
