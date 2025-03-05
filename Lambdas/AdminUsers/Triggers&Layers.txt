@@ -1,0 +1,2 @@
+Trigger:Apigateway - Rest API
+Layer: Klayers-p312-bcrypt
