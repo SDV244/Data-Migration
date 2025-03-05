@@ -1,0 +1,604 @@
+---
+    version: v1
+    
+    resources:
+      DynamoDb:
+        prerequisites:
+          - "SNSTopic → New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic.   [Mandatory]"
+        parameters:
+          ### Done
+          - EnvironmentName:
+            - value: "nmexbd-nonprod"
+            - description: "Its a prefix which will be added to resource names."
+            - required: true
+            - default: Null
+            - convention:
+              - "<Appcode>-<EnvironmentType> (Example: 'ngst-dev')"
+            - constraints:
+              - "Only lowercase,alphanumeric and hyphen allowed."
+              - "Max Length Allowed: 28 characters"
+
+          ### Done
+          - TableName:
+            - value: "nmexbd-nonprod_reference_schema_table"
+            - description: "Name of the table."
+            - required: true
+            - default: Null
+            - recommended_value: 
+              - "<Appcode>_<Environment>_<TablePurpose> (Example: 'gamma_dev_vehicle_history_data')"
+            - constraints: 
+              - "Only below values are allowed"
+                - "The table name must contain only lowercase letters, numbers and use with hyphen (-) or underscore (_).It cannot start or end with an under score or hyphen."
+                - "Max Length Allowed: 255 characters"
+                - "Min Length Allowed: 3 characters"
+
+          ### Done
+          - Environment:
+            - value: "dynamodevnmexbd_nonprod_reference_schema_table"
+            - description: "Environment Type"
+            - required: true
+            - default: dev
+            - constraints: 
+              - "Only below values are allowed"
+                - dev
+                - dev1
+                - dev2
+                - qa
+                - qa1
+                - qa2
+                - stg
+                - stg1
+                - stg2
+                - prod
+                - tcat
+
+          ### Done
+          - SNSTopic:
+            - value: ""
+            - description: "Provide the name of SNS Topic to which Cloud watch alarms needs to be sent.New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic. "
+            - required: true
+            - default: Null
+            - recommended_value: 
+              - "New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic."
+            - constraints: 
+              "Must be an existing SNS Topic Name"
+
+          ### Done
+          - PartitionKeyName:
+            - value: "FileType"
+            - description: "Name of the partition key."
+            - required: true
+            - default: Null
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+
+          ### Done
+          - PartitionKeyType:
+            - value: "S"
+            - description: "Type of the partition key S-String N-Number B-Binary."
+            - required: true
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - SortKeyName:
+            - value: "FileName"
+            - description: "Name of the sort key."
+            - required: false
+            - default: ' '  (blank)
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+
+          ### Done
+          - SortKeyType:
+            - value: "S"
+            - description: "Type of the sort key S-String N-Number B-Binary."
+            - required: false
+            - default: ' ' (blank)
+            - recommended_value: 
+              - ""
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - BillingAndScalingMode:
+            - value: ""
+            - description: "Specify how you are charged for read and write throughput and how you manage capacity"
+            - required: true
+            - default: "ONDEMAND"
+            - recommended_value: 
+              - "PROVISIONED - If you choose provisioned mode, you specify the number of reads and writes per second that you require for your application. You can use auto scaling to adjust your table's provisioned capacity automatically in response to traffic changes.
+              - "ONDEMAND - This is a flexible billing option capable of serving thousands of requests per second without capacity planning. DynamoDB on-demand offers pay-per-request pricing for read and write requests so that you pay only for what you use."
+            - constraints: 
+              - "Only below values are allowed"
+                - PROVISIONED
+                - ONDEMAND
+
+          ### No aplica
+          - MaxWriteCapacityUnits:
+            - value: ""
+            - description: "Maximum write capacity units used during auto scaling (ignored when BillingAndScalingMode := ONDEMAND)"
+            - required: [Optional - Required if EnableAutoscaling is true]
+            - default: 1
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+
+          ### No aplica
+          - MinWriteCapacityUnits:
+            - value: ""
+            - description: "Minimum write capacity units used during auto scaling (ignored when BillingAndScalingMode := ONDEMAND)"
+            - required: true
+            - default: 1
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+    
+          ### No aplica
+          - MaxReadCapacityUnits:
+            - value: ""
+            - description: "Maximum readcapacity units used during auto scaling (ignored when BillingAndScalingMode := ONDEMAND)"
+            - required: [Optional - Required if EnableAutoscaling is true]
+            - default: 1
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+
+          ### No aplica
+          - MinReadCapacityUnits:
+            - value: ""
+            - description: "Minimum read capacity units used during auto scaling (ignored when BillingAndScalingMode := ONDEMAND)"
+            - required: true
+            - default: 1
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+    
+          - WriteCapacityUnitsUtilizationTarget:
+            - value: ""
+            - description: "Target write capacity utilization (in percent) that auto scaling tries to achieve (if you have spiky writes, a lower number is better; ignored when BillingAndScalingMode := ONDEMAND)."
+            - required: [Optional - Required if EnableAutoscaling is true]
+            - default: 80
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+
+          ### No aplica
+          - ReadCapacityUnitsUtilizationTarget:
+            - value: ""
+            - description: "Target read capacity utilization (in percent) that auto scaling tries to achieve (if you have spiky writes, a lower number is better; ignored when BillingAndScalingMode := ONDEMAND)."
+            - required: [Optional - Required if EnableAutoscaling is true]
+            - default: 80
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+
+          ### Done
+          - TimeToLiveAttributeName:
+            - value: ""
+            - description: "Name of the Time to Live attribute used to store the expiration time (unix timestamp in seconds)"
+            - required: false
+            - default: ' ' (blank)
+            - recommended_value: 
+              - "As per application requirement."
+            - constraints: Null
+
+          ### Done
+          - EnableAutoScaling:
+            - value: ""
+            - description: "Choose if Auto Scaling needs to be enabled for the tables"
+            - required: false
+            - default: false
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'true'
+                - 'false'
+    
+          ### Done
+          - EnablePointInTimeRecovery:
+            - value: ""
+            - description: "Choose if Point In Time Recovery Needs to be enabled"
+            - required: false
+            - default: False
+            - recommended_value: 
+              - "This is set to true by default for production"
+            - constraints: 
+              - "Only below values are allowed"
+                - 'True'
+                - 'False'
+
+          ### Done
+          - StreamViewType:
+            - value: ""
+            - description: "Determines the information that the stream captures when an item in the table is modified. This is used for triggering lambda/other aws resources based on events in table."
+            - required: false
+            - default: "DISABLED"
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - DISABLED
+                - KEYS_ONLY
+                - NEW_IMAGE
+                - OLD_IMAGE
+                - NEW_AND_OLD_IMAGES
+    
+          ### Done
+          - ReadThrottleEventsThreshold:
+            - value: ""
+            - description: "Provide the threshold value for the read throttle. Alarms will be triggered if the read events cross the threshold value specified here."
+            - required: false
+            - default: 10
+            - recommended_value: Null
+            - constraints: 
+              - "Only numbers allowed"
+
+          ### Done
+          - WriteThrottleEventsThreshold:
+            - value: ""
+            - description: "Provide the threshold value for the write throttle. Alarms will be triggered if the write events cross the threshold value specified here."
+            - required: false
+            - default: 10
+            - recommended_value: Null
+            - constraints: 
+              - "Only numbers allowed"
+    
+          ### Done
+          - GSIPartitionKey1:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index partition key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSIPartitionKey1Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index partition key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+    
+          ### Done
+          - GSISortKey1:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSISortKey1Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index sort key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - GSIPartitionKey2:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index partition key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSIPartitionKey2Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index partition key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - GSISortKey2:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSISortKey2Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index sort key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - GSIPartitionKey3:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index partition key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSIPartitionKey3Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index partition key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - GSISortKey3:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSISortKey3Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index sort key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - GSIPartitionKey4:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index partition key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSIPartitionKey4Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index partition key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - GSISortKey4:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSISortKey4Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index sort key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - GSIPartitionKey5:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index partition key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSIPartitionKey5Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index partition key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+
+          ### Done
+          - GSISortKey5:
+            - value: ""
+            - description: "Provide the name of the Global Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a partition key and optionally corresponding sort key to create a Global Secondary Index"
+
+          ### Done
+          - GSISortKey5Type:
+            - value: ""
+            - description: "Provide the type of the Global Secondary Index sort key if required. Supported types are String, Number and Boolean"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+          
+          ### Done
+          - LSISortKey1:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a sort key to create a Local Secondary Index"
+              - "HASH (sort key) has to be set for the table for the LSI to be created"
+
+          ### Done
+          - LSISortKey1Type:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key type if required"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+          
+          ### Done
+          - LSISortKey2:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a sort key to create a Local Secondary Index"
+              - "HASH (sort key) has to be set for the table for the LSI to be created"
+
+          ### Done
+          - LSISortKey2Type:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key type if required"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+          
+          ### Done
+          - LSISortKey3:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a sort key to create a Local Secondary Index"
+              - "HASH (sort key) has to be set for the table for the LSI to be created"
+
+          ### Done
+          - LSISortKey3Type:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key type if required"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+          
+          ### Done
+          - LSISortKey4:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a sort key to create a Local Secondary Index"
+              - "HASH (sort key) has to be set for the table for the LSI to be created"
+
+          ### Done
+          - LSISortKey4Type:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key type if required"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'
+          
+          ### Done
+          - LSISortKey5:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key name if required"
+            - required: false
+            - default: ''
+            - recommended_value: Null
+            - constraints: 
+              - "It is mandatory to provide a sort key to create a Local Secondary Index"
+              - "HASH (sort key) has to be set for the table for the LSI to be created"
+
+          ### Done
+          - LSISortKey5Type:
+            - value: ""
+            - description: "Provide the name of the Local Secondary Index sort key type if required"
+            - required: false
+            - default: 'S'
+            - recommended_value: Null
+            - constraints: 
+              - "Only below values are allowed"
+                - 'S'
+                - 'N'
+                - 'B'

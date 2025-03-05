@@ -1,0 +1,658 @@
+---
+version: v17.2
+
+resources:
+  Cloudfront:
+    prerequisites:
+      - "If you are using Lambda@edge authorizer with cloudfront, lambda@edge lambda function role, cognito client and userpool details has to be passed as an input to this product."
+    
+    parameters:
+    ### Done
+      - EnvironmentName:
+        - value: "nmexbd-nonprod-cloudfront-webapp"
+        - description: "Its a prefix which will be added to resource names."
+        - required: true
+        - default: Null
+        - convention:
+          - "<AppName>-<EnvironmentType>" #(Example: 'ngst-dev')
+          # If there are multiple Cloudfront Distributions created as part of the same application/blueprint, add <Purpose> as the suffix.
+          - "<Appcode>-<EnvironmentType>-<Purpose>"
+        - constraints:
+          - "Only lowercase,alphanumeric and hyphen allowed."
+          - "Max Length Allowed: 28 characters"
+
+    ### Done
+      - DefaultRootObject:
+        - value: ""
+        - description: "Represents the object that you want CloudFront to request from your origin (for example, index.html) when a viewer requests the root URL for your distribution"
+        - required: true
+        - default: 'index.html'
+        - recommended_value: 'index.html'
+        - constraints:
+          - "Must be a valid object name which will be placed in S3"
+        
+    ### Done
+      - EnableDistribution:
+        - value: ""
+        - description: "'true/false' switch to enable or disable the Cloudfront Distribution."
+        - required: false
+        - default: true
+        - recommended_value: "By default the cloudfront distribution will be provisioned with 'Enabled' state. If there is a need for application in future to disable the Distribution, you can use this parameter."
+        - constraints: "Only below values are allowed
+          - true
+          - false"
+
+    ### Done  
+      - HttpVersion:
+        - value: ""
+        - description: "Specify the HTTP version that you want viewers to use to communicate with CloudFront."
+        - required: true
+        - default: "http2"
+        - recommended_value: "Recommended to use the default value which is 'http2'"
+        - constraints: "Only below values are allowed
+          - http1.1
+          - http2"
+
+    ### Done  
+      - IPV6Enabled:
+          - value: ""
+          - description: 'True/False switch to enable response to IPV6 DNS requests.'
+          - required: false
+          - default: 'true'
+          - recommended_value: 'If there are users on IPv6 network, it is recommended to leave this parameter as true'
+          - constraints: 'Only below values are allowed: true, false'
+
+    ### Done
+      - PriceClass:
+          - value: ""
+          - description: 'Represents the price class that corresponds with the maximum price that you want to pay for CloudFront service'
+          - required: false
+          - default: 'PriceClass_100'
+          - recommended_value: 'It is recommended to use the default value which is PriceClass_All'
+          - constraints: 'Only below values are allowed: PriceClass_100, PriceClass_200, PriceClass_All'
+
+    ### Done
+      - WebACLId:
+          - value: ""
+          - description: 'Represents the unique identifier that specifies the AWS WAF web ACL. The WebACLId must be referenced from WAFv2 product outputs which will be created as part of the Blueprint.'
+          - required: false
+          - default: Null
+          - recommended_value: 'As per application requirement, if WAF is required for protecting the public website, create WAF using WAFv2 product and refer WAFv2WebACLArn from that product outputs. If WAF protection is not required, pass blank value or skip this parameter in blueprint.'
+          - constraints: ""
+
+    ### Done   
+      - Compress:
+          - value: ""
+          - description: 'True/False switch to allow CloudFront to automatically compress certain files for this cache behavior'
+          - required: false
+          - default: 'true'
+          - recommended_value: 'As per the application requirement'
+          - constraints: 'Only below values are allowed: true, false'
+
+    ### Done
+      - Aliases:
+          - value: "Please fill this value with the assigned Alias"
+          - description: 'Provide the Website Domain name that needs to be used by Cloudfront as Alias. You may provide a list of aliases with comma separated.'
+          - required: true
+          - default: Null
+          - recommended_value: 'We do not recommend to use AWS provided domain (cloudfront.net), instead use nissan specific custom domains.'
+          - constraints: ""
+
+    ### Done
+      - SmoothStreaming:
+          - value: ""
+          - description: 'True/False switch to represent whether you want to distribute media files in the Microsoft Smooth Streaming format using the origin that is associated with this cache behavior.'
+          - required: false
+          - default: 'false'
+          - recommended_value: 'As per the application requirement'
+          - constraints: 'Only below values are allowed: true, false'
+
+    ### Done
+      - OriginDomainName:
+          - value: "nissan-nmex-nmexbd-nonprod-static-website-map-us-east-1.s3.amazonaws.com"
+          - description: 'Represents the DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for this origin or The DNS domain name for the HTTP server from which you want CloudFront to get objects for this origin.'
+          - required: true
+          - default: Null
+          - recommended_value: 'As per the Cloudfront Origin, use the below naming conventions: Amazon S3 bucket - <BucketName>.s3.<AWS region>.amazonaws.com (for US-EAST-1, use s3.amazonaws.com); Elastic Load Balancing – Loadbalancer dns (!GetAtt ALB.Outputs.LoadBalancerUrl)'
+          - constraints: ""
+
+    ### Done    
+      - OriginDomainName2:
+          - value: ""
+          - description: 'Represents the second DNS name of the Api gateway or The DNS domain name for the HTTP server from which you want CloudFront to get objects for this origin.'
+          - required: false
+          - default: Null
+          - recommended_value: 'As per the Cloudfront Origin, use the below naming conventions: Amazon S3 bucket - <BucketName>.s3.<AWS region>.amazonaws.com (for US-EAST-1, use s3.amazonaws.com); Elastic Load Balancing – Loadbalancer dns (!GetAtt ALB.Outputs.LoadBalancerUrl); Api-Gateway - Apigateway DNS (!GetAtt APIG.Outputs.ApiGatewayInvokeURL)'
+          - constraints: ""
+
+    ### Done
+      - OriginId:
+          - value: "!Sub 'nmexapplication-nmexbd-nonprod-S3Origin'"
+          - description: 'Represents a unique identifier for the origin or origin group. The value of Id must be unique within the distribution.'
+          - required: true
+          - default: Null
+          - recommended_value: 'Based on the Cloudfront origin use below formats: ${ApplicationName}-${EnvironmentType}-S3Origin ## For S3; ${ApplicationName}-${EnvironmentType}-ALBOrigin ## For ALB'
+          - constraints: ""
+
+     ### Done
+      - OriginId2:
+          - value: ""
+          - description: 'Represents a unique identifier for the origin or origin group. The value of Id must be unique within the distribution.'
+          - required: false
+          - default: Null
+          - recommended_value: 'Based on the Cloudfront origin use below formats: ${ApplicationName}-${EnvironmentType}-APIGOrigin ## For S3; ${ApplicationName}-${EnvironmentType}-ALBOrigin ## For ALB'
+          - constraints: ""
+
+    ### Done
+      - OriginPath:
+          - value: ""
+          - description: 'Represents an optional element that causes CloudFront to request your content from a directory in your Amazon S3 bucket or your custom origin.'
+          - required: false
+          - default: '/'
+          - recommended_value: 'As per the application requirement. If the contents are placed inside a folder specify the path.'
+          - constraints: ""
+
+    ### Done
+      - OriginPath2:
+          - value: ""
+          - description: 'Represents an optional element that causes CloudFront to request your content from a directory in your Amazon S3 bucket or your custom origin.'
+          - required: false
+          - default: '/'
+          - recommended_value: 'As per the application requirement. If the contents are placed inside a folder specify the path.'
+          - constraints: ""
+
+    ### Done
+      - FailoverOriginDomainName:
+          - value: ""
+          - description: 'Represents the DNS name of the second Amazon S3 bucket from which you want CloudFront to get objects for this origin or The DNS domain name for the HTTP server from which you want CloudFront to get objects for this origin.'
+          - required: true
+          - default: Null
+          - recommended_value: 'As per the Cloudfront Origin, use the below naming conventions: Amazon S3 bucket - <BucketName>.s3.<AWS region>.amazonaws.com (for US-EAST-1, use s3.amazonaws.com); Elastic Load Balancing – Loadbalancer dns (!GetAtt ALB.Outputs.LoadBalancerUrl)'
+          - constraints: ""
+
+    ### Done
+      - FailoverOriginId:
+          - value: ""
+          - description: 'Represents a unique identifier for the failover origin or origin group. The value of Id must be unique within the distribution.'
+          - required: true
+          - default: Null
+          - recommended_value: 'Based on the Cloudfront origin use below formats: ${ApplicationName}-${EnvironmentType}-S3Origin ## For S3; ${ApplicationName}-${EnvironmentType}-ALBOrigin ## For ALB'
+          - constraints: ""
+
+    ### Done
+      - FailoverOriginPath:
+          - value: ""
+          - description: 'Represents an optional element that causes CloudFront to request your content from a directory in your Amazon S3 bucket or your custom origin.'
+          - required: false
+          - default: '/'
+          - recommended_value: 'As per the application requirement. If the contents are placed inside a folder specify the path.'
+          - constraints: ""
+
+    ### Done
+      - AcmCertificateArn:
+          - value: ""
+          - description: 'Represents the Custom SSL certificate ARN. The SSL certificate ARN will be unique for each AWS account.'
+          - required: true
+          - default: Null
+          - recommended_value: 'As per the application environment and AWS account where the app is hosted. Refer Service Catalog Landing Zone Specific Parameter Reference'
+          - constraints: ""
+
+    ### Done
+      - OriginType:
+          - value: "S3"
+          - description: 'Represents origin type of your distribution. ie. s3 buckets or ALB'
+          - required: true
+          - default: Null
+          - recommended_value: 'As per the application requirement, choose the origin type.'
+          - constraints: 'Only below values are allowed: S3, ALB, APIG'
+
+    ### Done
+      - OriginType2:
+          - value: ""
+          - description: 'Represents second origin type of your distribution. ie. s3 buckets, APIG or ALB'
+          - required: false
+          - default: Null
+          - recommended_value: 'As per the application requirement, choose the origin type.'
+          - constraints: 'Only below values are allowed: S3, ALB, APIG'
+
+    ### Done
+      - ResponsePagePath:
+          - value: ""
+          - description: 'The path of the first error page for the website (e.g. /error.html).'
+          - required: false
+          - default: 'error.html'
+          - recommended_value: 'As per the application requirement'
+          - constraints: 'Must be valid html path'
+
+    ### Done
+      - ResponsePagePath2:
+          - value: ""
+          - description: 'The path of the second error page for the website (e.g. /error.html).'
+          - required: false
+          - default: 'error.html'
+          - recommended_value: 'As per the application requirement'
+          - constraints: 'Must be valid html path'
+
+    ### Done
+      - LambdaEventType:
+          - value: ""
+          - description: 'Represents the event type that triggers a Lambda function invocation.'
+          - required: true
+          - default: 'viewer-request'
+          - recommended_value: 'Use default value which is viewer-request.'
+          - constraints: 'Only below values are allowed: viewer-request'
+
+    ### Done
+      - DefaultLambdaEdgeARN:
+          description: "The ARN of the Basic Auth Lambda function. You must specify the ARN of a function version. DefaultLambdaEdgeARN will be referred from the output of the Lambda@Edge product."
+          required: "Optional – Only for Lambda@Edge Auth"
+          default_value: "Null"
+          recommended_value: "As per the application requirement, if S3 website protection is required, include LambdaEdge product in the blueprint and refer DefaultLambdaEdgeARN from the outputs."
+
+    ### Done    
+      - ParseAuthLambdaEdgeARN:
+          description: "The ARN of the Parse Auth Lambda function. You must specify the ARN of a function version. ParseAuthLambdaEdgeARN will be referred from the output of the Lambda@Edge product."
+          required: "Required"
+          default_value: "Null"
+          recommended_value: "As per the application requirement, if S3 website protection is required, include LambdaEdge product in the blueprint and refer ParseAuthLambdaEdgeARN from the outputs."
+
+    ### Done
+      - RefreshAuthLambdaEdgeARN:
+          description: "The ARN of the Parse RefreshLambda function. You must specify the ARN of a function version. RefreshAuthLambdaEdgeARN will be referred from the output of the Lambda@Edge product."
+          required: "Required"
+          default_value: "Null"
+          recommended_value: "As per the application requirement, if S3 website protection is required, include LambdaEdge product in the blueprint and refer RefreshAuthLambdaEdgeARN from the outputs."
+
+    ### Done
+      - UserPoolName:
+          description: "Provide the name of the userpool. This parameter is only required if Lambda@edge functionality is used."
+          required: "Required"
+          default_value: ""
+          recommended_value: "<Region>-<IDPName>-<Appcode>-<EnvironmentType> (Example: 'nna-secureauth-tmtb-dev')"
+          constraints: "Only lowercase, alphanumeric and hyphen allowed."
+
+    ### Done
+      - UserpoolId:
+          description: "Provide the ID of the userpool from the output of cognito resource block. This parameter is only required if Lambda@edge functionality is used."
+          required: "Required"
+          default_value: ""
+          recommended_value: "Null"
+          constraints: "Get the value from the output of cognito resource."
+
+    ### Done
+      - ClientId:
+          description: "Provide the client ID from the output of cognito resource block. This parameter is only required if Lambda@edge functionality is used."
+          required: "Required"
+          default_value: ""
+          recommended_value: "Null"
+          constraints: "Get the value from the output of cognito client resource."
+
+    ### Done
+      - ResponseType:
+          description: "Provide the response type. This parameter is only required if Lambda@edge functionality is used."
+          required: "Required"
+          default_value: "authorization_code"
+          recommended_value: "'authorization_code'"
+          constraints: "Provide a valid response type value."
+
+    ### Done
+      - OauthFlow:
+          description: "Provide the oauth flow type. This parameter is only required if Lambda@edge functionality is used."
+          required: "Required"
+          default_value: "code"
+          recommended_value: "'code'"
+          constraints:
+            - "Only following values are allowed: 'code', 'client_credentials'"
+
+    ### Done
+      - OauthScope:
+          description: "Provide the oauth scope. This parameter is only required if Lambda@edge functionality is used."
+          required: "Required"
+          default_value: "openid"
+          recommended_value: "'openid'"
+          constraints: "Provide a valid oauth scope."
+
+    ### Done
+      - LambdaAtEdgeRoleName:
+          description: "Provide IAM role of the lambda function from the output of lambda@edge resource. This parameter is only required if Lambda@edge functionality is used."
+          required: "Required"
+          default_value: ""
+          recommended_value: ""
+          constraints: "Get the value from LambdaAtEdge product output."
+
+    ### Done
+      - FunctionCodeViewerRequest:
+          description: "Provide the code for the cloudfront function that needs to be associated with the viewer request. Only applicable if such a scenario is required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per the application requirement."
+          constraints: "String should represent a valid Cloudfront function script with runtime 'cloudfront-js-1.0'."
+
+    ### Done
+      - FunctionCodeViewerResponse:
+          description: "Provide the code for the cloudfront function that needs to be associated with the viewer response. Only applicable if such a scenario is required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per the application requirement."
+          constraints: "String should represent a valid Cloudfront function script with runtime 'cloudfront-js-1.0'."
+
+    ### Done
+      - LoggingBucket:
+          description: "Provides the logging bucket name with the pattern *.s3.amazonaws.com."
+          required: "Optional"
+          default_value: ""
+          recommended_value: "As per the application requirement."
+
+    ### Done
+      - CookieLoggingEnabled:
+        -  value: "false"
+        -  description: "Provide true or false whether the cookie values need to be logged along with the access logs."
+        -  required: "Optional"
+        -  default_value: "true"
+        -  recommended_value: ""
+        -  constraints: "Should be either 'true' or 'false'."
+
+    ### Done    
+      - MultipleErrorcode:
+          description: "Choice parameter for multiple error pages. Select 'yes' if you want to add multiple error pages. Maximum two error pages can be added."
+          required: "Optional"
+          default_value: "No"
+          recommended_value: "As per the application requirement."
+
+    ### Done
+      - ErrorCode1:
+          description: "HTTP status code for which you want to specify a custom error page and/or a caching duration."
+          required: "Optional"
+          default_value: "404"
+          recommended_value: "As per the application requirement."
+
+    ### Done
+      - ErrorCode2:
+          description: "HTTP status code for which you want to specify second custom error page and/or a caching duration."
+          required: "Required only for MultipleErrorcode='yes'"
+          default_value: ""
+          recommended_value: "As per the application requirement."
+
+    ### Done
+      - ResponseCode:
+          description: "HTTP status code that you want CloudFront to return to the viewer along with the custom error page. You can add multiple response codes with comma separation."
+          required: "Optional"
+          default_value: "404"
+          recommended_value: "As per the application requirement."
+
+    ### Done
+      - Cloudfrontoriginaccessidentity:
+          value: "!GetAtt S3ServiceWebnmexapplicationUI.Outputs.CloudFrontOAI"
+          description: "Canonical User access to S3 bucket. The Cloudfront OAI gets created as part of S3 product and it needs to be referred from S3 product outputs."
+          required: "Required – Only for S3 Origin"
+          default_value: "Null"
+          recommended_value: "Must be referred from S3 Product Outputs."
+
+    ### Done
+      - Cloudfrontoriginaccessidentity2:
+          description: "Canonical User access to origin2 S3 bucket. The Cloudfront OAI gets created as part of S3 product and it needs to be referred from S3 product outputs."
+          required: "Required – Only for S3 as Origin 2"
+          default_value: "Null"
+          recommended_value: "Must be referred from S3 Product Outputs."
+    
+    ### Done
+      - BehaviourPathPattern:
+          description: "The pattern that specifies which requests to apply the behavior to."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "You can optionally include a slash (/) at the beginning of the path pattern. For example, /images/*.jpg. CloudFront behavior is the same with or without the leading /."
+
+    ### Done
+      - CacheBehaviourTargetOrigin:
+          description: "Provide origin to be used as target for cache behavior with path pattern as BehaviourPathPattern."
+          required: "Optional"
+          default_value: "Origin2"
+          allowed_value: ["Origin1", "Origin2"]
+
+    ### Done
+      - CachePolicyIdMultipleOrigin:
+          description: "The value for the identifier of the cache policy that is attached to custom cache behavior. Leave default if not required."
+          required: "Optional"
+          default_value: "658327ea-f89d-4fab-a63d-7e88639e58f6"  # Managed-CachingOptimized
+          recommended_value: "Must be a valid cache policy id."
+
+    ### Done
+      - FailoverCloudfrontoriginaccessidentity:
+          description: "Canonical User access to s3 bucket. The Cloudfront OAI gets created as part of S3 product and it needs to be referred from S3 product outputs."
+          required: "Required – Only for S3 Origin"
+          default_value: "Null"
+          recommended_value: "Must be referred from S3 Product Outputs."
+
+    ### Done
+      - Cloudfront4xxErrorThreshold:
+          description: "Provide the threshold required for 4xx error notifications (25 for 25%, 10 for 10% error)."
+          required: "Optional"
+          default_value: 25
+          recommended_value: "As per the environment, decide the threshold value for error notifications."
+          constraints: "Must be Numeric."
+
+    ### Done
+      - Cloudfront5xxErrorThreshold:
+          description: "Provide the threshold required for 5xx error notifications (25 for 25%, 10 for 10% error)."
+          required: "Optional"
+          default_value: 25
+          recommended_value: "As per the environment, decide the threshold value for error notifications."
+          constraints: "Must be Numeric."
+
+    ### Done
+      - SNSTopic:
+          description: "Provide the name of SNS Topic to which CloudWatch alarms need to be sent. New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic."
+          required: "Required"
+          default_value: "Null"
+          recommended_value: "New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic."
+          constraints: "Must be an existing SNS Topic Name."
+
+    ### Done    
+      - EnableAllAllowedMethods:
+          description: "To Enable all allowed methods for default cache behaviour."
+          required: "Optional"
+          default_value: "false"
+          recommended_value: "By default, the default cache behaviour will have GET, HEAD, and OPTIONS allowed methods. To enable GET, HEAD, OPTIONS, PUT, PATCH, DELETE and POST allowed methods, you can pass 'true' as value for this parameter."
+          constraints: 
+            - "Only below values are allowed: 'true', 'false'."
+
+    ### Done
+      - HeaderName1:
+          description: "The name of a header that you want CloudFront to send to your origin. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done    
+      - HeaderValue1:
+          description: "The value for the header that you specified in the HeaderName1 field. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - HeaderName2:
+          description: "The name of a header that you want CloudFront to send to your origin. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - HeaderValue2:
+          description: "The value for the header that you specified in the HeaderName2 field. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - HeaderName3:
+          description: "The name of a header that you want CloudFront to send to your second origin. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - HeaderValue3:
+          description: "The value for the header that you specified in the HeaderName3 field. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - HeaderName4:
+          description: "The name of a header that you want CloudFront to send to your second origin. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - HeaderValue4:
+          description: "The value for the header that you specified in the HeaderName4 field. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - ResponseHeadersPolicy:
+          description: "The value for the identifier for a response headers policy. Leave blank if not required. You can get this value from the cloudfrontresponseheader product output."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - OriginIdLambdaEdgeCacheBehavior:
+          description: "Provide the custom Origin ID for Lambda Edge."
+          required: "Optional"
+          default_value: "dummy-origin"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - DefaultCachePolicyId:
+          description: "The value for the identifier of the cache policy that is attached to default cache behavior."
+          required: "Required"
+          default_value: "658327ea-f89d-4fab-a63d-7e88639e58f6"  # Managed-CachingOptimized
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - DefaultOriginRequestPolicyId:
+          description: "The value for the identifier of the origin request policy that is attached to default cache behavior. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - ParseAuthCachePolicyId:
+          description: "The value for the identifier of the cache policy that is attached to parseauth cache behavior. Only required if you enable lambda authentication."
+          required: "Required if you enable lambda authentication"
+          default_value: "658327ea-f89d-4fab-a63d-7e88639e58f6"  # Managed-CachingOptimized
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - ParseAuthOriginRequestPolicyId:
+          description: "The value for the identifier of the origin request policy that is attached to parseauth cache behavior. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - refreshAuthCachePolicyId:
+          description: "The value for the identifier of the cache policy that is attached to refreshauth cache behavior. Only required if you enable lambda authentication."
+          required: "Required if you enable lambda authentication"
+          default_value: "658327ea-f89d-4fab-a63d-7e88639e58f6"  # Managed-CachingOptimized
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - refreshAuthOriginRequestPolicyId:
+          description: "The value for the identifier of the origin request policy that is attached to refreshauth cache behavior. Leave blank if not required."
+          required: "Optional"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - CustomCacheBehavior:
+          description: "Choose true if custom cache behavior is required."
+          required: "Optional"
+          default_value: "false"
+          recommended_value: "Null"
+          allowed_values:
+            - "true"
+            - "false"
+
+    ### Done
+      - CustomCompress:
+          description: "Choose true to compress certain files for this custom cache behavior."
+          required: "Optional"
+          default_value: "true"
+          recommended_value: "Null"
+          allowed_values:
+            - "true"
+            - "false"
+
+    ### Done
+      - CustomSmoothStreaming:
+          description: "Choose whether you want to distribute media files in the Microsoft Smooth Streaming format using the origin that is associated with this custom cache behavior."
+          required: "Optional"
+          default_value: "false"
+          recommended_value: "Null"
+          allowed_values:
+            - "true"
+            - "false"
+
+    ### Done
+      - ViewerProtocolPolicy:
+          description: "Provide the protocol that viewers can use to access the files in the origin specified by TargetOriginId."
+          required: "Required if you enabled CustomCacheBehavior"
+          default_value: "redirect-to-https"
+          recommended_value: "Null"
+          allowed_values:
+            - "allow-all"
+            - "https-only"
+            - "redirect-to-https"
+
+    ### Done
+      - CustomPathPattern:
+          description: "Provide the pattern (for example, images/*.jpg) that specifies which requests to apply the custom cache behavior to."
+          required: "Required if you enabled CustomCacheBehavior"
+          default_value: "/"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - OriginIdCustomCacheBehavior:
+          description: "Provide the custom Origin ID for custom cache behavior."
+          required: "Required if you enabled CustomCacheBehavior"
+          default_value: "Null"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - CustomCachePolicyId:
+          description: "Provide the cache policy id for the custom cache behavior."
+          required: "Required if you enabled CustomCacheBehavior"
+          default_value: "658327ea-f89d-4fab-a63d-7e88639e58f6"
+          recommended_value: "As per project requirement."
+
+    ### Done
+      - CustomLambdaFunction:
+          description: "Choose true if lambda function association is required in custom cache behavior."
+          required: "Optional"
+          default_value: "false"
+          recommended_value:
+            - "false"
+            - "true"
+
+    ### Done
+      - CustomEventType:
+          description: "Please specify the event type that triggers a Lambda function invocation in custom cache behavior."
+          required: "Required if you enabled CustomLambdaFunction"
+          default_value: "viewer-request"
+          allowed_values:
+            - "viewer-request"
+            - "origin-request"
+            - "origin-response"
+            - "viewer-response"
+
+    ### Done
+      - CustomLambdaEdgeARN:
+          description: "The ARN of the Lambda function. You must specify the ARN of a function version for the custom cache behaviour."
+          required: "Required if you enabled CustomLambdaFunction"
+          default_value: "''"
+          recommended_value: "As per project requirement."

@@ -1,0 +1,4003 @@
+{
+  "FileType": {
+    "S": "xlsx"
+  },
+  "FileName": {
+    "S": "JDP.xlsx"
+  },
+  "FileColumn": {
+    "M": {
+      "Sheets": {
+        "M": {
+          "SERVICIO 1M": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YR_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MNTH_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SAMPLE_ID"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SURVEY_ID"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TYPE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_CHANNEL"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "STATUS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROCESSING_DATE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "JD_POWER_SURVEY_DATE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ADVISOR_ID"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ZONE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "GROUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CSA"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "STATE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MATRIX_KEY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DISTRIBUTOR_KEY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DISTRIBUTOR_NAME"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "INTERBRANDS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "BIG_GROUPS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CSI"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "AS_ROM"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FOM"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NISSAN_MODEL"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "S2_VEHICLE_DELIVERED"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "S3_SERVICE_TYPE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS2_RATING_REASONS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SI0_HOW_SERVICE_APPOINTMENT_WAS_SCHEDULED"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SI1_A_EASE_OF_SERVICE_APPOINTMENT_SCHEDULING"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SI1_B_SPEED_OF_VEHICLE_RECEIPT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SI1_C_OVERALL_SERVICE_INITIATION_PROCESS_RATING"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA1_A_FOCUS_ON_YOU_AND_YOUR_NEEDS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA1_B_PROVIDED_USEFUL_GUIDANCE_ABOUT_YOUR_VEHICLE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA1_C_KEPT_YOU_INFORMED_ABOUT_YOUR_VEHICLE_STATUS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA1_D_USED_TABLET_OR_MOBILE_DEVICE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA2_SERVICE_ADVISOR_REVIEWED_WORK_WITH_YOU"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA3_A_SERVICE_ADVISOR_FRIENDLINESS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA3_B_SERVICE_ADVISOR_KNOWLEDGE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA3_C_TRUST_IN_THE_ATTENDING_STAFF"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SA3_D_OVERALL_SERVICE_ADVISOR_RATING"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SF1_A_EASE_OF_ACCESS_AND_EXIT_FROM_SERVICE_CENTER"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SF1_B_SERVICE_CENTER_CLEANLINESS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SF1_C_COMFORT_AND_COURTESIES"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SF1_D_OVERALL_FACILITY_RATING"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD1_SOMEONE_FROM_DEALER_CONTACTED_YOU_WHEN_VEHICLE_WAS_READY"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD2_VEHICLE_READY_AS_PROMISED"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD3_DETAILED_COST_ESTIMATE_PROVIDED"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD4_FINAL_AMOUNT_PAID"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD5_COST_EXPLANATION_AFTER_SERVICE_COMPLETION"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD6_A_TIME_REQUIRED_TO_COMPLETE_PAPERWORK_AND_PICKUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD6_B_TIME_FROM_ADVISOR_ARRIVAL_TO_FINAL_DELIVERY"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD7_A_SPEED_OF_DELIVERY_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD7_C_FAIRNESS_OF_CHARGE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VD7_B_OVERALL_DELIVERY_PROCESS_RATING"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SQ1_WORK_COMPLETED_RIGHT_FIRST_TIME"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SQ1A_REASON_WORK_NOT_COMPLETED_FIRST_TIME"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SQ2_REASON_WORK_NOT_COMPLETED_FIRST_TIME"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SQ2_OTHER_SPECIFY"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SQ3_VEHICLE_ADJUSTMENTS_REMAINED_THE_SAME"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SQ4_A_TOTAL_TIME_REQUIRED_TO_COMPLETE_SERVICE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SQ4_B_VEHICLE_CLEANLINESS_AND_CONDITION_AT_DELIVERY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SQ4_C_OVERALL_SERVICE_QUALITY_RATING"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SE1_OVERALL_SERVICE_EXPERIENCE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SE2_SERVICE_EXPERIENCE_COMMENTS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SE3_OVERALL_OPINION_OF_NISSAN_AS_A_BRAND"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SATISFACTION_INDEX"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_INITIATION"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DEALER_STAFF"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FACILITIES"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "QUALITY"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          },
+          "SERVICIO 3M": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YR_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RLNG_03_MNTH_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MATRIX_KEY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DLR_CD"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DSTRBR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "GROUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ZONE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FOM"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "AS_ROM"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_RECORDS_RECEIVED"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NO_CONTACT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CONTACT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CLEANING_RECORDS_ERRORS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "BOUNCED"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SUCCESSFULLY_SENT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SENT_WHATSAPP"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SENT_EMAIL"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COMPLETED"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COMPLETED_WHATSAPP"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COMPLETED_EMAIL"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RESPONSE_RATE_TOTAL_RECORDS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RESPONSE_RATE_SUCCESSFULLY_SENT"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CBD"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RANKING_BY_DEALER"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_0_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_1_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_2_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_3_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_4_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_5_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_6_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_7_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_8_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_9_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_10_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_EXPERIENCE_SATISFACTION_NPS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YES_SQ1_WORK_COMPLETED_RIGHT_FIRST_TIME"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NO_SQ1_WORK_COMPLETED_RIGHT_FIRST_TIME"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_SQ1_WORK_COMPLETED_RIGHT_FIRST_TIME"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_0_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_1_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_2_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_3_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_4_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_5_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_6_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_7_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_8_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_9_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_10_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RECOMMENDATION_NPS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YES_VOC2_RETURN_FOR_NEXT_SERVICE_IN_DEALER"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NO_VOC2_RETURN_FOR_NEXT_SERVICE_IN_DEALER"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_VOC2_RETURN_FOR_NEXT_SERVICE_IN_DEALER"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_0_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_1_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_2_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_3_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_4_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_5_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_6_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_7_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_8_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_9_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_10_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EXPECTATIONS_SERVICE_PROCESS_NPS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_1_CLOSED_ALERTS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_2_CLOSED_ALERTS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_3_CLOSED_ALERTS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_CLOSED_ALERTS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_1_PERCENT_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "OPEN_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COEFFICIENT_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COEFFICIENT_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          },
+          "VENTA 1M": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YR_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MNTH_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SAMPLE_ID"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SURVEY_ID"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SURVEY_ID_HISTORIC"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TYPE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_CHANNEL"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "STATUS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROCESSING_DATE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SURVEY_START_DATE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC_SURVEY_DATE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ADVISOR_ID"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ZONE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "GROUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CSA"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "STATE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MATRIX_KEY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DISTRIBUTOR_KEY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DISTRIBUTOR_NAME"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "INTERBRANDS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "BIG_GROUPS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SSI"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SALES_ROM"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DOM"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NISSAN_MODEL"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VIN"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "S1_VEHICLE_DELIVERED"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC1_PURCHASE_EXPERIENCE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC1A_RATING_REASONS_9_10"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC1B_ACTIONS_TO_IMPROVE_EXPERIENCE_0_8"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC2_RETURN_FOR_NEW_PURCHASE_SERVICE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC3_OFFERED_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC4_TEST_DRIVE_SATISFACTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TEST_DRIVE_VERBATIMS"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TEST_DRIVE_SENTIMENT"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC5_PURCHASE_PROCESS_EXPECTATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC5A_RATING_REASONS_9_10"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "VOC5B_ACTIONS_TO_IMPROVE_EXPERIENCE_0_8"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SENTIMENT"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "HISTORIC_CLASSIFICATION"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COMMENT_CQ"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          },
+          "VENTA 3M": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YR_NB"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RLNG_03_MNTH_NB"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MATRIX_KEY"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DLR_CD"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DSTRBR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "GROUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ZONE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DOM"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ROM"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_RECEIVED_RECORDS"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NO_CONTACT"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YES_CONTACT"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CLEANED_RECORDS_ERRORS"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "BOUNCED"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SUCCESSFULLY_SENT"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SENT_WHATSAPP"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SENT_EMAIL"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COMPLETED"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SURVEYS_COMPLETED_WHATSAPP"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SURVEYS_COMPLETED_EMAIL"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RESPONSE_RATE_TOTAL_RECORDS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RESPONSE_RATE_SUCCESSFULLY_SENT"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CBD"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DISTRIBUTOR_RANKING"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS_AVERAGE_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TEST_DRIVE_NPS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TEST_DRIVE_AVERAGE"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PURCHASE_PROCESS_EXPECTATION_NPS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PURCHASE_PROCESS_EXPECTATION_AVERAGE"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_1_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_2_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_3_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_1_PERCENT_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TICKETS_OPEN"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SATISFACTION_PURCHASE_EXPERIENCE_NPS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS_3RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS_6RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COEFFICIENT_3RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "COEFFICIENT_6RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "user": {
+    "S": "Juan"
+  }
+}

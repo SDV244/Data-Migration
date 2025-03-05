@@ -1,0 +1,290 @@
+---
+version: 22
+
+resources:
+  Lambda:
+    sc_version: 22
+    prerequisites:
+      - SecurityGroup: "Group ID of the Security Group to which the Lambda instances needs to be attached. Group ID can be got from the outputs of SecurityGroup Product."
+      -	"Before using this template. Please create a folder named 'lambda-env-vars' and place env.yaml file inside it if single lambda function is being used in the blueprint. For multiple lambda functions, create the file in the following format, ${LambdaPurpose}env.yaml. For different files across environments follow ${LambdaPurpose}${environment}env.yaml, eg: ingestiondevenv.yaml. This is mandatory for SC Lambda product to work from v19.2, since we are using transform function inside the cfn-template. Modify the file contents only if environment variables are required."
+    parameters:
+      ### Done
+      - EnvironmentName:
+        - value: "nmexbd-nonprod-lambda_validation"
+        - description: "Its a prefix which will be added to resource names."
+        - required: TRUE
+        - default: Null
+        - convention:
+          - "<AppName>-<EnvironmentType>"
+          # In case of multiple Lambda Funtions, please include the Lambda purpose as suffix.
+          - "<Appcode>-<EnvironmentType>-<Purpose>"
+          # Note: EnvironmentType parameter can be skipped for prod
+        - constraints:
+          - "Only lowercase,alphanumeric and hyphen allowed."
+          - "Max Length Allowed: 28 characters"
+      
+      ### Done
+      - ApplicationName:
+        - value: ""
+        - description: "Provide the ApplicationName. This has to match with the value provided in portfolio."
+        - required: TRUE
+        - default: Null
+        - convention:
+          - ""
+        - constraints:
+          - ""
+
+      ### Done
+      - LambdaRuntime:
+        - value: ""
+        - description: "Runtime environment for the Lambda Function"
+        - required: TRUE
+        - default: "python3.9"
+        - allowedValues:
+          - dotnet6 
+          -	dotnet7 (Added in V22)
+          -	go1.x
+          -	java11
+          -	java17
+          -	java8
+          -	java8.al2
+          -	nodejs14.x
+          -	nodejs16.x
+          -	nodejs18.x
+          -	python3.6
+          -	python3.7
+          -	python3.8
+          -	python3.9
+          -	python3.10
+          -	python3.11 (Added in V22)
+          -	ruby2.7
+      
+      ### Done
+      - LambdaTimeOut:
+        - value: 5
+        - description: "The amount of time (in seconds) that Lambda allows a function to run before stopping it."
+        - required: OPTIONAL
+        - default: 3
+        - constraints:
+          - "Must be numeric"
+          - "Between 1 and 900"
+
+      ### Done
+      - LambdaHandler:
+        - value: "lambda_function.lambda_handler"
+        - description: "The name of the method within your code that Lambda calls to execute your function."
+        - required: TRUE
+        - default: Null
+        - convention: "<PackageName>.<MethodName>"
+        - constraints:
+          - "Maximum 128 characters"
+          - "Must end with non numeric character"
+
+      ### Done
+      - LambdaMemorySize:
+        - value: ""
+        - description: "The amount of memory that the function has access to."
+        - required: OPTIONAL
+        - default: 128
+        - constraints:
+          - "Must be numeric"
+          - "Between 128 and 10240"
+
+      ### Done
+      - EnvVariables:
+        - value: true
+        - description: "Adds environment variables to a function as key-value pairs."
+        - required: OPTIONAL
+        - default: false
+        - convention: ''
+        - constraints: 
+          - "Provide the Environment Variables as key value pair in env.yaml file if EnvVariables set to true. This file should be present in the lambda-env-vars folder along with the blueprint in the infra repository"
+          - "Allowed values:"
+            - 'true'
+            - 'false'
+      ### Done
+      - EnvFile:
+        - value: "lambda_validationenv.yaml"
+        - description: "Provide the env variables file name. In case of multiple Lambda Funtions, please include the Lambda purpose as prefix."
+        - required: OPTIONAL
+        - default: Null
+        - convention: "env.yaml"
+        - constraints: 
+          - ""
+
+      ### Done
+      - SecurityGroup:
+        - value: "Please fill this space with the assigned security group"
+        - description: "Group ID of the Security Group to which the EC2 instances needs to be attached. Group ID can be got from the outputs of SecurityGroup Product."
+        - required: true
+        - default: Null
+        - convention: "<GroupID>"
+        - constraints: 
+          - "Must be an existing Group ID"
+
+      ### Done
+      - LogRetentionDays:
+        - value: ""
+        - description: "Days for which the lambda logs needs to be retained in Cloudwatch."
+        - required: OPTIONAL
+        - default: 14
+        - constraints: 
+          - "Must be numeric"
+
+      ### Done
+      - LambdaErrorThreshold:
+        - value: ""
+        - description: "Provide the threshold required for Lambda error notifications (0.25 for 25% , 0.1 for 10 % error)."
+        - required: OPTIONAL
+        - default: 0.25
+        - constraints: 
+          - "Must be numeric"
+
+      ### Done
+      - SNSTopic:
+        - value: ""
+        - description: "Provide the name of SNS Topic to which Cloud watch alarms needs to be sent. New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic."
+        - required: TRUE
+        - default: Null
+        - conventions:
+          - "New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic."
+        - constraints: 
+          - "Must be am existing SNS Topic Name"
+
+      ### Done
+      - EfsMountPath:
+        - value: ""
+        - description: "Provide the path where the function can access the file system, starting with /mnt/."
+        - required: OPTIONAL
+        - default: ""
+        - constraints: 
+          - "Must start with /mnt"
+
+      ### Done
+      - EfsAccessPointArn:
+        - value: ""
+        - description: "Provide the ARN of the Amazon EFS access point that provides access to the file system."
+        - required: OPTIONAL
+        - default: Null
+        - constraints: 
+          - "Must be ARN of a valid access point created for the EFS"
+
+      ### Done
+      - PackageType:
+        - value: ""
+        - description: "Provide the type of package used for Lambda deployment - Zip or Image."
+        - required: true
+        - default: "Zip"
+        - allowedValues:
+          - "Zip"
+          - "Image"
+
+      ### Done
+      - ReservedConcurrency:
+        - value: 
+        - description: "Provide the number of concurrent instances that are to be reserved for the lambda function."
+        - required: TRUE
+        - default: 5
+        - conventions:
+          - "As per application use-case. Setting this value to 0 disables reserved concurrency."
+        - constraints: 
+          - "Must be numeric"
+          - "Between 0 and 50"
+      
+      ### Done
+      - ProvisionedConcurrency:
+        - value: ""
+        - description: "Provide the number of provisioned concurrency to be set for this Lambda function. 0 disables the capability."
+        - required: TRUE
+        - default: 0
+        - constraints: 
+          - "Must be numeric"
+          - "Between 0 and ReservedConcurrency value"
+
+      ### Done
+      - InsightsExtensionVersion:
+        - value: ""
+        - description: "Provide the version of the extension to be used for Lambda Insights. Not available in *.0.IMAGE versions."
+        - required: OPTIONAL
+        - default: Null
+        - constraints: 
+          - "Should be a valid version of insights layer as published by AWS"
+
+      ### Done     
+      - LambdaLayer1:
+        - value: "arn:aws:lambda:us-east-1:234297229994:layer:AWSSDKPandas-Python39:version"
+        - description: "Provide the lambda layer arn in the format 'arn:aws:lambda:<region>:<account-id>:layer:layer-name:version' to be attached to this function. Available only with 'Zip' deployments. Not available in *.0.IMAGE versions."
+        - required: OPTIONAL
+        - default: ""
+        - constraints: 
+          - ""
+
+      ### Done        
+      - LambdaLayer2:
+        - value: ""
+        - description: "Provide the lambda layer arn in the format 'arn:aws:lambda:<region>:<account-id>:layer:layer-name:version' to be attached to this function. Available only with 'Zip' deployments. Not available in *.0.IMAGE versions."
+        - required: OPTIONAL
+        - default: ""
+        - constraints: 
+          - ""
+
+      ### Done   
+      - LambdaLayer3:
+        - value: ""
+        - description: "Provide the lambda layer arn in the format 'arn:aws:lambda:<region>:<account-id>:layer:layer-name:version' to be attached to this function. Available only with 'Zip' deployments. Not available in *.0.IMAGE versions."
+        - required: OPTIONAL
+        - default: ""
+        - constraints: 
+          - ""
+
+      ### Done         
+      - LambdaLayer4:
+        - value: ""
+        - description: "Provide the lambda layer arn in the format 'arn:aws:lambda:<region>:<account-id>:layer:layer-name:version' to be attached to this function. Available only with 'Zip' deployments. Not available in *.0.IMAGE versions."
+        - required: OPTIONAL
+        - default: ""
+        - constraints: 
+          - ""
+
+      ### Done         
+      - LambdaLayer5:
+        - value: ""
+        - description: "Provide the lambda layer arn in the format 'arn:aws:lambda:<region>:<account-id>:layer:layer-name:version' to be attached to this function. Available only with 'Zip' deployments. Not available in *.0.IMAGE versions."
+        - required: OPTIONAL
+        - default: ""
+        - constraints: 
+          - ""
+      
+      ### Done 
+      - EphemeralStorageSize:
+        - value: ""
+        - description: "This option allows users to configure ephemeral storage (/tmp) between 512 MB and 10,240 MB. Ephemeral storage is perfect for executions that require access to a large working directory to do things like unzipping large files or downloading massive datasets during runtime."
+        - required: OPTIONAL
+        - default: 512
+        - constraints: 
+          - "The default value is 512, but it can be any whole number between 512 MB and 10,240 MB"
+
+      ### Done         
+      - TracingConfiguration:
+        - value: ""
+        - description: "This option allows users to configure ephemeral storage (/tmp) between 512 MB and 10,240 MB. Ephemeral storage is perfect for executions that require access to a large working directory to do things like unzipping large files or downloading massive datasets during runtime."
+        - required: OPTIONAL
+        - default: ""
+        - conventions:
+          - 'Active'. But in order to use Lambda SnapStart 'https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html', the TracingConfig value should be 'PassThrough'
+        - constraints: 
+          - "Must be one of the below:"
+            - 'Active'
+            - 'PassThrough'
+
+      ### Done         
+      - MaximumRetry:
+        - value: ""
+        - description: "This option allows users to retry the maximum number of times when the function returns an error. Leave default if no customization is required."
+        - required: OPTIONAL
+        - default: 2
+        - conventions:
+          - As per the application use-case
+        - constraints: 
+          - "Must be one of the below:"
+            - [0,1,2]

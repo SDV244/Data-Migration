@@ -1,0 +1,215 @@
+{
+  "FileType": {
+    "S": "xlsx"
+  },
+  "FileName": {
+    "S": "NRFM.xlsx"
+  },
+  "FileColumn": {
+    "M": {
+      "Sheets": {
+        "M": {
+          "NRFM": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FSCL_YR_NB"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MNTH_NB"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DLR_CD"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DEALER"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "REGION"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ZONE_MANAGER"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "GROUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CONTRACTS_TARGET"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RETAIL_CONTRACTS"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "RETAIL_SALES_NMEX"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SELECTIVITY_LEASING"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EXTENDED_WARRANTY_PERCENTAGE"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "user": {
+    "S": "Juan"
+  }
+}

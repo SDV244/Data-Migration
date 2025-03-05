@@ -1,0 +1,379 @@
+{
+  "FileType": {
+    "S": "xlsx"
+  },
+  "FileName": {
+    "S": "CDO.xlsx"
+  },
+  "FileColumn": {
+    "M": {
+      "Sheets": {
+        "M": {
+          "DESGLOSE TOTAL": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FSCL_YR_NB"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MNTH_NB"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "GROUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DLR_CD"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DSTRBR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "OWNER"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CDO"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          },
+          "REPROCESO": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FSCL_YR_NB"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DSTRBR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DLR_CD"
+                  },
+                  "DataType": {
+                    "S": "integer"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "JANUARY"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FEBRUARY"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MARCH"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "APRIL"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MAY"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "JUNE"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "JULY"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "AUGUST"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SEPTEMBER"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "OCTOBER"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NOVEMBER"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DECEMBER"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "user": {
+    "S": "Juan"
+  }
+}

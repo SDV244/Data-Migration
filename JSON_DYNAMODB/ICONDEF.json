@@ -1,0 +1,1499 @@
+{
+    "FileType": {
+      "S": "xlsx"
+    },
+    "FileName": {
+      "S": "ICON.xlsx"
+    },
+    "FileColumn": {
+      "M": {
+        "Sheets": {
+          "M": {
+            "AVG ORS MENSUAL": {
+              "L": [
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FSCL_YR_NB"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DLR_CD"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DSTRBR"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "GROUP"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "APRIL_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MAY_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JUNE_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JULY_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "AUGUST_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "SEPTEMBER_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "OCTOBER_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "NOVEMBER_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DECEMBER_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JANUARY_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FEBRUARY_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MARCH_ORDERS_PUB_GAR_INT"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "APRIL_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MAY_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JUNE_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JULY_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "AUGUST_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "SEPTEMBER_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "OCTOBER_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "NOVEMBER_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DECEMBER_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JANUARY_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FEBRUARY_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MARCH_ORDERS_PUB_GAR"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                }
+              ]
+            },
+            "AVG VENTAS MENSUAL": {
+              "L": [
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FSCL_YR_NB"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DLR_CD"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DSTRBR"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "GROUP"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "APRIL"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MAY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JUNE"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JULY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "AUGUST"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "SEPTEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "OCTOBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "NOVEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DECEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JANUARY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FEBRUARY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MARCH"
+                    },
+                    "DataType": {
+                      "S": "double"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                }
+              ]
+            },
+            "DEALERS": {
+              "L": [
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DLR_CD"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DSTRBR"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "GROUP"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "ZONE"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "SALES"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "AFTER_SALES"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "PREOWNED"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FLEETS"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MANAGERIAL"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "HYP"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "WHOLESALE"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FOM"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DOM"
+                    },
+                    "DataType": {
+                      "S": "double"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                }
+              ]
+            },
+            "OBJ VENTAS NIC": {
+              "L": [
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FSCL_YR_NB"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DLR_CD"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DSTRBR"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "APRIL"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MAY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JUNE"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JULY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "AUGUST"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "SEPTEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "OCTOBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "NOVEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DECEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JANUARY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FEBRUARY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MARCH"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                }
+              ]
+            },
+            "OPORTUNIDADES BDC POSVENTA": {
+              "L": [
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FSCL_YR_NB"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DLR_CD"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DSTRBR"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "APRIL"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MAY"
+                    },
+                    "DataType": {
+                      "S": "double"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JUNE"
+                    },
+                    "DataType": {
+                      "S": "double"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JULY"
+                    },
+                    "DataType": {
+                      "S": "double"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "AUGUST"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "SEPTEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "OCTOBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "NOVEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "DECEMBER"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "JANUARY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "FEBRUARY"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MARCH"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": false
+                    }
+                  }
+                }
+              ]
+            },
+            "REGLAS": {
+              "L": [
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "NEW_POSITION"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "POSITION_TYPE"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "STORE_SIZE"
+                    },
+                    "DataType": {
+                      "S": "string"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                },
+                {
+                  "M": {
+                    "ColumnName": {
+                      "S": "MINIMUM_REQUIRED_STAFF"
+                    },
+                    "DataType": {
+                      "S": "int"
+                    },
+                    "DropColumn": {
+                      "BOOL": false
+                    },
+                    "KeyColumn": {
+                      "BOOL": true
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "user": {
+      "S": "Juan"
+    }
+  }

@@ -1,0 +1,104 @@
+Reference:https://confluence.aws.na.nissancloud.biz/display/GCAE/API+Gateway+Runbook%3A+v16-+Updated+the+syntax+for+multiple+SNS+Topics#APIGatewayRunbook:v16UpdatedthesyntaxformultipleSNSTopics-Overview
+
+---
+version: v1
+
+resources:
+  WebsocketAPIRoute:
+    parameters:
+      - EnvironmentName: 
+        - value: "nmexbd-nonprod-api_websocket"
+        //Example value above
+        - description: "An environment name that will be prefixed to resource names"
+        - required: true
+        - default: Null
+
+      - RouteKey: 
+        - value: "$connect"
+          description: "Route key for WebSocket connection"
+          required: true
+          default: Null
+          Recommended Value: "Application dependent. Should be a meaningful name which can identify the backend"
+
+        - value: "$disconnect"
+          description: "Route key for WebSocket disconnection"
+          required: true
+          default: Null
+          Recommended Value: "Application dependent. Should be a meaningful name which can identify the backend"
+
+      - ApiId:
+        - value: "!GetAtt WSAPI.Outputs.ApiId" ## Replace WSAPIwith actual resource block name in your template
+        - description: "Id of WS api. Route will be added to this api"
+        - required: true
+        - default: Nil
+
+      - IntegrationMethod:
+        - value: ""
+        - description: "Integration Method. Request will be sent back to backend using this method"
+        - required: true
+        - default: "POST"
+        - constrains: 
+          Value should be among  -GET
+           - PUT
+           - POST
+           - DELETE
+
+      - IntegrationType:
+        - value: "AWS_PROXY"
+        - description: "Specifies whether the detailed metrics is needed in cloudwatch"
+        - required: true
+        - default: "true"
+        - constrains: 
+          Value should be among  -GET
+           - AWS
+           - AWS_PROXY
+           - HTTP
+           - HTTP_PROXY
+        - Recommended Value: "Backend dependent. AWS/AWS_PROXY for lambda. HTTP/HTTP_PROXY if backend is accessed via VPC link or internet. If you select the *_PROXY option, the message will be proxied to the backend. Otherwise the message will be sent to the backend according to the RequestTemplate defined"           
+
+      - IntegrationUri:
+        - value: "Please fill this value with the URI of the lambda lambda_connect_disconnect_websocketenv"
+        //Example One updated above
+        - description: "As per application use case. The key value pairs in this json formatted string will be checked in the decoded token for providing authentication. Check service documentation for detailed info about allowed format"
+        - required: true
+        - Recommended Value: ""
+        If backend is lambda, use lambda invocation URI( in */invocations format). Example : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:690554025895:function:tmtb-stg-Proxy/invocations"
+        If backend is ECS/EC2 exposed via NLB and VPC link NLB URL ( in https:// format ) corresponding to the integration
+        If backend is an Http endpoint, give HTTP endpoint  ( in https:// format ) corresponding to the integration
+
+      - ConnectionId:
+        - value: "'https://cognito-idp.us-east-1.amazonaws.com/us-east-1_mppRzCDVJ/.well-known/jwks.json'"
+        //Example one Updated above
+        - description: "Id of VPC link in case of private integration via VPC link. If not private integration, leave blank. If backend is lambda function, leave blank"
+        - required: Conditional
+        - default: "blank"
+      - Recommended Value: 
+          If backend is ES/EC2 exposed via NLB and Vpc link, pass vpc link ID.
+          If backend is HTTP endpoint or lambda function, leave blank        
+
+      - RequestTemplates:
+        - value: "'{"connectionId" : "$context.connectionId"}'"
+        - description: "Template for sending message to backend of non proxy integrations. Leave blank for Proxy integrations"
+        - required: true
+        - Reference: ""
+        leave blank for PROXY integrations. 
+        Pass what ever values you need the backend to receive from API Gateway. Refer https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html for the list of values you can pass into the backend. 
+
+      - IntegrationTimeOut:
+        - value: "29000"
+        - description: "Custom timeout between 50 and 29,000 milliseconds for integration"
+        - required: false
+        - default: '29000'
+
+      - IamCredentialsArn:
+        - value: "Please fill this value with the lambda role"
+        //Example one above
+        - description: "Specifies the IAM credentials role required for the integration. An IAM Role for API Gateway to assume, use the role's Amazon Resource Name (ARN)"
+        - required: false
+        - default: ""
+      
+      - EnableRouteResponse:
+        - value: ""
+        - description: "Enable route response for a WebSocket API. This parameter is mainly used to enable/disable two way communication. WebSocket routes can be configured for two-way or one-way communication. API Gateway will not pass the backend response through to the route response, unless you set up a route response."
+        - required: "false"
+        - Constraints: Must be either 'true' or 'false'

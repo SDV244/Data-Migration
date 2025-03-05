@@ -1,0 +1,1115 @@
+{
+  "FileType": {
+    "S": "xlsx"
+  },
+  "FileName": {
+    "S": "NEI.xlsx"
+  },
+  "FileColumn": {
+    "M": {
+      "Sheets": {
+        "M": {
+          "SERVICIO": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YR_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "QTR_YR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DLR_CD"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DSTRBR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "GROUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ZONE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_RESULT"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_RECEPTION_3_2_1_1_WELCOME_CLIENT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_RECEPTION_3_2_1_2_VEHICLE_INSPECTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_RECEPTION_3_2_1_3_LISTEN_CLIENT_NEEDS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_QUALITY_CAMPAIGNS_3_2_2_1_APPLY_CAMPAIGNS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_WORK_EXPLANATION_3_2_3_1_EXPLAIN_TASKS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_WORK_EXPLANATION_3_2_3_2_DELIVERY_PROMISE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_WORK_PROGRESS_CTRL_3_3_1_2_MONITOR_PROGRESS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_WORKSHOP_3_3_2_1_WORK_TIME_CLIENT_CONTACT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_WORKSHOP_3_3_2_2_TOOL_INVENTORY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_WORKSHOP_3_3_2_3_TOOL_MAINTENANCE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_WORKSHOP_3_3_2_4_TOOLS_EQUIPMENT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_WORKSHOP_3_3_2_5_MULTIPOINT_INSPECTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SERVICE_NEXT_APPOINTMENT_3_3_3_1_SCHEDULE_NEXT_SERVICE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "WASH_STANDARD_3_4_1_1_WASH_AREA_CONDITIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "WASH_STANDARD_3_4_1_2_HUMAN_RESOURCES"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "WASH_STANDARD_3_4_1_3_WASH_PROCESS_STAGES"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "WASH_STANDARD_3_4_1_4_QUALITY_INSPECTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "QUALITY_CTRL_INSPECTION_3_5_1_1_RESPONSIBILITIES"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "QUALITY_CTRL_INSPECTION_3_5_1_2_PROCESS_EXECUTION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "QUALITY_CTRL_PROGRAM_F1_3_5_2_1_SOLUTIONS_RECLAMATIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_3_6_1_1_PREP_FOR_DELIVERY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_3_6_1_2_DELIVERY_EXPLANATION"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_3_6_1_3_ROAD_ASSISTANCE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_3_6_1_4_NEXT_SERVICES_REMINDER"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FOLLOWUP_3_6_2_1_VOC"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FOLLOWUP_3_6_2_2_COMPLAINTS_TRACKING_CAC"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          },
+          "VENTA": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YR_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "QTR_YR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DLR_CD"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DSTRBR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "GROUP"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ZONE"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "R_SALES"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "R_SERVICE"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "R_EFFECTIVENESS"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_RECEPTION_2_2_1_1_WELCOME_CLIENT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_RECEPTION_2_2_1_2_REGISTER_CLIENT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_RECEPTION_2_2_1_3_INTRODUCE_CLIENT_APV"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_CONSULT_2_2_2_1_IDENTIFY_NEEDS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_CONSULT_2_2_2_2_TOOLS_HOME"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "EFFECTIVE_OPP_CONSULT_2_2_2_3_TOOLS_DIGITAL"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PRODUCT_PRESENT_STATIC_2_3_1_1_EXPLAIN_FEATURES"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PRODUCT_PRESENT_STATIC_2_3_1_2_ACCESSORIES"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PRODUCT_PRESENT_STATIC_2_3_1_3_ACCESSORY_COMMS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PRODUCT_PRESENT_TEST_DRIVE_2_3_2_1_CAR_AVAILABILITY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PRODUCT_PRESENT_TEST_DRIVE_2_3_2_2_LICENSE_CHECK"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PRODUCT_PRESENT_TEST_DRIVE_2_3_2_3_EXPLAIN_FEATURES"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PRODUCT_PRESENT_TEST_DRIVE_2_3_2_4_CLIENT_AMENITIES"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PRODUCT_PRESENT_TEST_DRIVE_2_3_2_5_SATISFACTION_SURVEY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ECON_PROPOSAL_TRADEIN_2_4_1_1_PROMOTE_PROGRAM"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ECON_PROPOSAL_SALE_CLOSURE_2_4_2_1_PROFILING"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ECON_PROPOSAL_SALE_CLOSURE_2_4_2_2_DOC_CHECKLIST"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ECON_PROPOSAL_SALE_CLOSURE_2_4_2_3_CREDIT_OPTIONS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ECON_PROPOSAL_SALE_CLOSURE_2_4_2_4_CLOSING_STRATEGY"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ECON_PROPOSAL_SALE_CLOSURE_2_4_2_5_CREDIT_APP"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_2_5_1_1_PREP_SCHEDULE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_2_5_1_2_CONFIRM_CLIENT_DETAILS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_2_5_1_3_PREP_VEHICLE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_2_5_1_4_RECEIVE_CLIENT"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DELIVERY_FOLLOWUP_2_5_1_5_HANDOVER_DOCS_VEHICLE"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FOLLOWUP_2_5_2_1_SALESFORCE_COMPLAINTS"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "user": {
+    "S": "Juan"
+  }
+}

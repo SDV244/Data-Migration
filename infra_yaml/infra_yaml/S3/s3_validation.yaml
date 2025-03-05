@@ -1,0 +1,404 @@
+---
+version: v1
+
+resources:
+  S3:
+    prerequisites:
+      - ApplicationRoleARN: "AM Role of the Service/Instance which needs access to S3 within the VPC. IAM role must be referenced from other product outputs or created using IAM-Role product in the blueprint."
+      - SNSTopic: "Name of the SNS Topic to which Cloudwatch Alarms need to be Sent. New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic. If replication is enabled, please ensure to use SNSTopicCW version 5 or higher"
+      - OnPremS3UserARN: "IAM User  which access S3 from On-Premise"
+      - OnPremIPAddress: "On-Premise device IP address from where S3 is accessed using IAM User." 
+    parameters:
+      ### Done
+      - EnvironmentName:
+        - value: "nmexbd-nonprod"  
+        - description: "Its a prefix which will be added to resource names."
+        - required: true
+        - default: Null
+        - convention:
+          - "<Appcode>-<EnvironmentType>"
+          - "<Appcode>-<EnvironmentType>-<Purpose>"
+        - constraints:
+          - "Only lowercase,alphanumeric and hyphen allowed."
+          - "Max Length Allowed: 28 characters"
+
+      ### Done
+      - BucketName:
+        - value: "nissan-nmex-nmexbd-nonprod-validation-map-us-east-1"
+        - description: "Bucket to store validated files in the frontend."
+        - required: true
+        - default: Null
+        - convention:
+          - "nissan-<nissan region>-<Appcode>-<Environment>-<BucketPurpose>-<AWS Region>"
+        - constraints:
+          - "The bucket name must contain only lowercase letters, numbers, periods (.), and dashes (-).It cannot start or end with a hyphen (-)."
+          - "Max Length Allowed: 63 characters"
+          - "Min Length Allowed: 3 characters"
+      
+      ### Done
+      - ApplicationRoleARN:
+        - value: ["arn:aws:iam::234297229994:role/lambda-presigned-url", "arn:aws:iam::234297229994:role/lambda-validation"]
+        - description: "ARN of the IAM Role which an instance/services assumes to access S3 Bucket."
+        - required: true
+        - default: Null
+        - constraints:
+          - "Must be a valid ARN format (arn:aws:iam::<AccountId>:role/<RoleName>)"
+          - "For Non-Website Buckets, specify the iam role arn of EC2/Lambda/ECS Task Role etc., which will access S3. IAM role must be referenced from other product outputs or created using IAM-Role product in the blueprint."
+          - "For Website Buckets , the IAM role arn must be that of Jenkins Role which is used to deploy website content into S3."
+
+      ### No aplica
+      - SNSTopic:
+        - value: ""
+        - description: "Provide the name of SNS Topic to which Cloud watch alarms needs to be sent. New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic."
+        - required: true
+        - default: Null
+        - constraints:
+          - "Must be an existing SNS Topic Name"
+
+      ### Done
+      - BucketSizeLimit:
+        - value: ""
+        - description: "Threshold value in Bytes for the Bucket Size. Upon reaching this limit, Cloud Alarms notification will be triggered. This is to manage Bucket usage."
+        - required: false
+        - default: 10737418240 # 10 GB
+        - constraints:
+          - "Must be numeric value"
+
+      ### Done
+      - Versioning:
+        - value: ""
+        - description: "'True/False' Switch to enable versioning in the bucket"
+        - required: false
+        - default: false
+        - allowedValues:
+          - true
+          - false
+      
+      ### Done
+      - UsedForWebsiteHosting:
+        - value: ''
+        - description: "'True/False' Switch to enable website hosting in the bucket. If bucket needs to host a static website pass value as 'true' or skip with the default value"
+        - required: false
+        - default: false
+        - allowedValues:
+          - true
+          - false
+
+      ### No aplica
+      ## For Accessing S3 from On-Premise (Cleo)
+      - OnPremS3UserARN:
+        - value: ""
+        - description: "ARN of the IAM User which access S3 Bucket from On-Premise"
+        - required: false
+        - default: '' #(blank)
+        - constrains:
+          - "Must be blank or pass valid arn if on-prem access required."
+
+      - OnPremIPAddress:
+        - value: ""
+        - description: "Public IP address (CIDR notation) of the device in On-premise which needs to access S3"
+        - required: false
+        - default: '' #(blank)
+        - constrains:
+          - "Must be blank or pass valid CIDR if on-prem access required."
+
+
+      ### Done
+      ## KMS Encryption parameter for S3 bucket
+      - EncryptionKmsKey:
+        - value: ""
+        - description: "Provide the ARN of the KMS customer managed key that is to be used for server side encryption of the bucket. 
+            Only required for non-website hosting buckets with explicit requirement for KMS CMK. If not provided, then AWS Managed KMS key would be used for normal buckets. 
+            For replication buckets (source and destination), SSE-S3 encryption will be used by default when this parameter is not provided. 
+            For website hosting S3 buckets, SSE-S3 is the only allowed encryption."
+        - required: false
+        - default: '' #(blank)
+        - constrains:
+          - "Must be a valid ARN for a symmetric KMS CMK key existing in the same account and region"
+
+      ### Done
+      ## For Triggering lambda function based on S3 Events
+      - LambdaFunctionARN:
+        - value: "arn:aws:lambda:us-east-1:234297229994:function:lambda_validation"
+        - description: "ARN of the Lamda Function in case the function needs to be triggered by S3 Events. 
+            The ARN must be referenced from Lambda product outputs which will be created as part of the Blueprint."
+        - required: false
+        - default: '' #(blank)
+        - constrains:
+          - "Must be blank or pass a existing lambda arn (arn:aws:lambda:<AWS Region>:<Account ID>:function:<Function Name>)"
+          - "As of now the template supports only object created events (Event: s3:ObjectCreated:*)"
+
+      ### Done.
+      - LambdaFunctionPrefixFilter:
+        - value: ""
+        - description: "Provide the prefix value that the filter searches for in object key names. Leave Blank if not required."
+        - required: false
+        - default: '' #(blank)
+        - constrains: 
+          - "As per application use case. If lambda needs to be triggered upon creation of an object with specific 'prefix' in the name, pass the prefix or else skip with the default value."
+      
+      ### No aplica
+      - LambdaFunctionSuffixFilter:
+        - value: ""
+        - description: "Provide the suffix value that the filter searches for in object key names. Leave Blank if not required."
+        - required: false
+        - default: '' #(blank)
+        - constrains: 
+          - "As per application use case. If lambda needs to be triggered upon creation of an object with specific 'suffix' in the name, pass the suffix or else skip with the default value."
+      
+      ### No aplica
+      ## For Triggering SQS queue based on S3 Events
+      - SqsQueueARN:
+        - value: ""
+        - description: "Provide the ARN of the SQS queue in case the queue needs to be triggered by S3 Events. The Queue must be referenced from SQS product outputs which will be created as part of the Blueprint."
+        - required: false
+        - default: '' #(blank)
+        - constrains:
+          - "Must be blank or pass existing SQS ARN"
+          - "As per application use case. If sqs needs to be triggered upon creation of an object in the Bucket, pass the queue ARN or else skip with the default value.In case SQS is required, use SQS product to create the queue and refer the QueueARN from that SQS products output."
+          - "As of now the template supports only object created events (Event: s3:ObjectCreated:*)"
+
+      ### No aplica
+      - SqsQueuePrefixFilter:
+        - value: ""
+        - description: "Provide the prefix value that the filter searches for in object key names. Leave Blank if not required."
+        - required: false
+        - default: '' #(blank)
+
+      ### No aplica
+      - SqsQueueSuffixFilter:
+        - value: ""
+        - description: "Provide the suffix value that the filter searches for in object key names. Leave Blank if not required."
+        - required: false
+        - default: '' #(blank)
+
+      ### No aplica
+      ## For Triggering SNS Topic based on S3 Events
+      - SnsTopicARN:
+        - value: ""
+        - description: "Provide the ARN of the SNS topic in case the queue needs to be triggered by S3 Events. The topic must be referenced from SnsTopic product outputs which will be created as part of the Blueprint."
+        - required: false
+        - default: '' #(blank)
+
+      ### No aplica
+      - SnsTopicPrefixFilter:
+        - value: ""
+        - description: "Provide the prefix value that the filter searches for in object key names. Leave Blank if not required."
+        - required: false
+        - default: '' #(blank)
+
+      ### No aplica
+      - SnsTopicSuffixFilter:
+        - value: ""
+        - description: "As per application use case. If SNS needs to be triggered upon creation of an object with specific 'suffix' in the name, pass the suffix or else skip with the default value."
+        - required: false
+        - default: '' #(blank)
+      
+      ### Done
+      ## To Enable Lifecycle Policy (Expiration, Intelligent Tiering and other lifecycle transitions)
+      - LifecyclePrefixFilter:
+        - value: ""
+        - description: "Prefix filter to define what objects are covered by the policy. Leave blank if not required."
+        - required: false
+        - default: '' #(blank) 
+
+      ### Done
+      - LifecycleExpirationInDays:
+        - value: 1
+        - description: "Set lifecycle to delete object after this number of days. Zero disables this function"
+        - required: false
+        - default: 0
+        - constrains: 
+          - "Only numeri values allowed"
+
+      ### No aplica
+      - LifecycleTransitionIAInDays:
+        - value: ""
+        - description: "Set lifecycle to transition object after this number of days to standard Infrequent Access storage class. Zero disables this function."
+        - required: false
+        - default: 0
+        - constrains: 
+          - "Only numeric values allowed"
+          - "Minimum 30 days required before objects can be transitioned to IA from standard storage class"
+          - "Must be less than ExpirationInDays if specified"
+
+      ### No aplica
+      - LifecycleTransitionITInDays:
+        - value: ""
+        - description: "Set lifecycle to transition object after this number of days to Intelligent tiering storage class. Zero disables this function."
+        - required: false
+        - default: 0
+        - constrains: 
+          - "Only numeric values allowed"
+          - "Minimum 30 days required before objects can be transitioned from IA to IT storage class"
+          - "Must be less than ExpirationInDays if specified"
+
+      ### No aplica
+      - LifecycleTransitionGlacierInDays:
+        - value: ""
+        - description: "Set lifecycle to transition object after this number of days to Glacier. Zero disables this function."
+        - required: false
+        - default: 0
+        - constrains:
+          - "Required only if transition to Glacier is required" 
+          - "Only numeri values allowed"
+          - "Must be less than ExpirationInDays if specified"
+
+      ### No aplica
+      - LifecycleTransitionGlacierDeepArchiveInDays:
+        - value: ""
+        - description: "Set lifecycle to transition object after this number of days to Glacier Deep Archive. Zero disables this function."
+        - required: false
+        - default: 0
+        - constrains:
+          - "Required only if transition to Glacier Deep Archive is required" 
+          - "Only numeric values allowed"
+          - "Should be at least 90 days after the Glacier transition if applicable"
+          - "Must be less than ExpirationInDays if specified"
+
+      ### No aplica
+      - IntelligentTieringPrefixFilter:
+        - value: ""
+        - description: "Prefix filter to define the objects captured under the Intelligent Tiering policy if selected."
+        - required: false
+        - default: '' #(blank) 
+
+      ### No aplica
+      - IntelligentTieringArchiveInDays:
+        - value: ""
+        - description: "Specify the number of days for transition to IT Archive if required. Zero disables this function."
+        - required: false
+        - default: '' #(blank) 
+        - constrains: 
+          - "Required only if Intelligent Tiering archive is to be enabled"
+          - "Should be a number"
+          - "Should be at least 90 days" 
+          - "Must be less than IntelligentTieringDeepArchiveInDays if specified"
+
+      ### No aplica
+      - IntelligentTieringDeepArchiveInDays:
+        - value: ""
+        - description: "Specify the number of days for transition to IT Deep Archive. Zero disables this function."
+        - required: false
+        - default: '' #(blank) 
+        - constrains: 
+          - "Required only if Intelligent Tiering deep archive is to be enabled"
+          - "Should be a number"
+          - "Should be at least 180 days" 
+          - "Must be greater than IntelligentTieringArchiveInDays if specified"
+
+      ### No aplica
+      ## For Enabling Replication configuration - source bucket
+      - IntelligentTieringDeepArchiveInDays:
+        - value: ""
+        - description: "Provide the replication destination bucket ARN name (Updated in Version 6.0) in case a replication source bucket is being created. It can be cross-account or cross-origin. Otherwise leave as default."
+        - required: false
+        - default: '' #(blank) 
+        - constrains: 
+          - "Required if this bucket is a replication source"
+          - "Valid S3 ARN to be provided."
+          - "Replication requires versioning to be enabled" 
+
+      ### No aplica
+      - ReplicationDestinationAccountId:
+        - value: ""
+        - description: "Provide the replication destination bucket account id in case a replication source bucket is being created and the replica is in a different account. Otherwise leave as default."
+        - required: false
+        - default: '' #(blank) 
+        - constrains: 
+          - "Valid AWS account id expected."
+
+      ### No aplica
+      - ReplicationPrefix:
+        - value: ""
+        - description: "Provide the prefix filter for replication if any. Optional for a replication source. Leave as default if all objects are to be replicated."
+        - required: false
+        - default: '' #(blank) 
+
+      ### No aplica
+      - ReplicaOwnerChangeRequired:
+        - value: ""
+        - description: "Need to be set as true if the ownership of the replica bucket is to be changed to the destination account. Otherwise by default the owner of the replica would be the source bucket owner account. 
+            Only applicable if the replication source bucket is being created."
+        - required: false
+        - default: false
+        - allowedValues: 
+          - true
+          - false
+
+      ### No aplica
+      - ReplicationDestinationKmsKey:
+        - value: ""
+        - description: "Provide the ARN of the KMS Customer Managed Key that is to be used for encrypting the objects in the replication destination bucket. 
+            The key should be present in the same region as the destination bucket and should be accessible by the replication role (output ReplicationRoleArn from S3 product)."
+        - required: false
+        - default: '' #(blank)
+        - constrains: 
+          - "Must be valid ARN of a Symmetric KMS key which is customer managed (KMS CMK)" 
+
+      ### No aplica
+      ## For Enabling Replication configuration - destination bucket
+      - ReplicationSourceAccount:
+        - value: ""
+        - description: "Provide the AWS source account number where the replication source bucket belongs. This is required if the bucket creates is to be a replication destination. Leave as default otherwise."
+        - required: false
+        - default: '' #(blank) 
+        - constrains: 
+          - "Required if this bucket is a replication destination"
+
+      ### Done
+      - CorsEnabled:
+        - value: true
+        - description: "Specify true if CORS needs to be enabled for the S3 bucket"
+        - required: false
+        - default: false
+        - allowedValues: 
+          - true
+          - false
+
+      ### Done
+      - CorsHeaders:
+        - value: "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+        - description: "Provide the list of CORS headers to be enabled separated by comma"
+        - required: false
+        - default: "Authorization,Accept,Origin,Content-type"
+
+      ### Done
+      - CorsMethods:
+        - value: "GET,PUT,POST"
+        - description: "Provide the list of CORS headers to be enabled separated by comma"
+        - required: false
+        - default: "GET"
+        - allowedValues: 
+          - GET
+          - PUT
+          - POST
+          - DELETE
+          - HEAD
+
+      ### Done
+      - CorsOrigins:
+        - value: ""
+        - description: "Provide the list of domains to be enabled for CORS separated by comma"
+        - required: false
+        - default: "nissancloud.com"
+
+      ### Done
+      - CorsExposedHeaders:
+        - value: "ETag"
+        - description: "Provide the list of headers to be enabled in response to the customer. Provide the values separated by comma"
+        - required: false
+        - default: '' #(blank)
+      
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+  

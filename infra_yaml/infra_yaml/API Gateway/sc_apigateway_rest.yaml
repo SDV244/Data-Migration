@@ -1,0 +1,313 @@
+---
+#NOTE: PLease look for the path_reference_for_sc_apigateway_rest.yaml file for fill the API paths configuration.
+
+version: v1
+
+resources:
+  ApiGateway:
+    parameters:
+      - ApiName: 
+        - value: "nmexbd-nonprod-apigateway_rest"
+        - description: "Its indicates the name of the newly create API gateway."
+        - required: true
+        - default: Null
+        - conventions: 
+          - <ApiName>-<ApplicationName>-<EnvironmentType>-<Version>
+        - constrains: 
+          - "Only lowercase,alphanumeric and hyphen allowed."
+
+      - ApiGatewayEndpointType: 
+        - value: "REGIONAL"
+        - description: "Specify the type of APIGateway Endpoint to be created."
+        - required: true
+        - default: "REGIONAL"
+        - allowedValues: 
+          - EDGE
+          - REGIONAL
+          - PRIVATE
+
+      - WhitelistedIps:
+        - value: ""
+        - description: " Comma-separated list of IPs addresses in CIDR notation which needs to be whitelisted in the API Resource Policy"
+        - required: true
+        - default: Null
+        - constrains: 
+          - "Must be in CIDR notation" 
+
+      - TracingEnabled:
+        - value: ""
+        - description: "Specifies whether active X-Ray tracing has to be enabled for this API"
+        - required: false
+        - default: "false"
+        - constrains: 
+          - "Should be either of two values - "True" or "False""
+
+
+      - VpcEndpointId:
+        - value: ""
+        - description: "Specify any custom VPC endpoint if required to be whitelisted in case of private APIs. If not specified for a private API, then the local VPC endpoint (for that correspoding account) will be whitelisted."
+        - required: false
+        - default: ""
+        - constrains: 
+          - "Should be a valid VPC endpoint id"
+
+      - StageVariable1:
+        - value: ""
+        - description: "Specify the value to be assigned to the stage variable StageVariable1. This value will be replaced wherever StageVariable1 is referenced in the API runtime"
+        - required: false
+        - default: ""
+
+      - StageVariable2:
+        - value: ""
+        - description: "Specify the value to be assigned to the stage variable StageVariable2. This value will be replaced wherever StageVariable1 is referenced in the API runtime"
+        - required: false
+        - default: ""
+
+      - StageVariable3:
+        - value: ""
+        - description: "Specify the value to be assigned to the stage variable StageVariable3. This value will be replaced wherever StageVariable1 is referenced in the API runtime"
+        - required: false
+        - default: "" 
+
+      - ExecLogRetentionDays:
+        - value: ""
+        - description: "Specify the number of days till the execution logs are to be retained"
+        - required: false
+        - default: 30
+
+      - DataTraceEnabled:
+        - value: "true"
+        - description: "Specify whether the request and response payload has to be included in the CloudWatch logs - Execution logs"
+        - required: false
+        - default: false
+        - constrains: 
+          - "Should be either of 'True' or 'False'"
+
+      - ExecLoggingLevel:
+        - value: "INFO"
+        - description: "Specify the logging level required for execution logs"
+        - required: false
+        - default: "INFO"
+        - allowedValues: 
+          - "INFO"
+          - "ERROR"
+
+      - AccessLoggingEnabled: 
+        - value: "true"
+        - description: "Specify the logging level required for execution logs"
+        - required: false
+        - default: false
+        - constrains: 
+          - "'True' if access logs are to be enabled for the API"
+          - "Should be either of 'True' or 'False'"
+
+      - AccessLoggingFormat:
+        - value: "$context.requestId"
+        - description: "Specify the format for the access log"
+        - required: false
+        - default: "$context.requestId" 
+        - constrains: 
+          - "Should be set of valid context variables"
+
+      - AccessLogRetention:
+        - value: ""
+        - description: "Specify the number of days for which access log need to be retained"
+        - required: false
+        - default: 30 
+
+      ## Cloudwatch Alarms configuration
+      - Api4xxErrorThreshold:
+        - value: ""
+        - description: "Provide the threshold required for 4xx error notifications (0.25 for 25% , 0.1 for 10 % error)."
+        - required: false
+        - default: 0.25
+        - constrains: 
+          - "Must be Numeric"
+ 
+      - Api5xxErrorThreshold:
+        - value: ""
+        - description: "Provide the threshold required for 5xx error notifications (0.25 for 25% , 0.1 for 10 % error)."
+        - required: false
+        - default: 0.25 
+        - constrains: 
+          - "Must be Numeric"
+
+      - SNSTopic:
+        - value: "!GetAtt CloudwatchTopic.Outputs.CWSNSTopicName"
+        - description: "Provide the name of SNS Topic to which Cloud watch alarms needs to be sent. New Topic with Email subscription can be created using SNSTopicCW product in the Blueprint template or it can be an existing topic."
+        - required: true
+        - default: 0.25
+        - constrains: 
+          - "Must be an existing SNS Topic Name"
+  
+  ApiDeployment:
+    prerequisites:
+      - DomainName: "This Blueprint must required API Domain name as the input. Refer https://confluence.aws.na.nissancloud.biz/display/APICOE/Naming+conventions+for+API+endpoints+in+cloud for standards"
+      - ApiGateway: "APIGateway Product needs to be created in the blueprint before this product."
+    parameters:
+      - ApiGatewayStageName: 
+        - value: ""
+        - description: "Provide the name of Api gateway stages which invokes the backend aplication. StageName must be referred from outputs of APIGateway product in blueprint."
+        - required: true
+        - default: Null
+        - constrains: 
+          - "Only lowercase,alphanumeric and hyphen allowed."
+
+      - ApiDomainName:
+        - value: ""
+        - description: "Provide the custom domain name to be used for this API. This Domain is already existing the AWS accounts"
+        - required: true
+        - default: Null
+
+      - ApiGatewayId:
+        - value: ""
+        - description: "Specifies the ID of the API gateway which will be deploy. APIGatewayId must be referred from outputs of APIGateway product in blueprint"
+        - required: true
+        - default: Null 
+  
+  ApiKey:
+    prerequisites: 
+      - ApiGatewayId: "API id is required to genarate the authentication key" 
+    parameters:
+      - EnvironmentName:
+        - value: ""
+        - description: "Prefix which will be added to resource names"
+        - required: true
+        - default: Null
+        - conventions: 
+          - "<AppName>-<EnvironmentType>"
+        - constrains: 
+          - "Only lowercase,alphanumeric and hyphen allowed"
+
+      - ApiConsumerName:
+        - value: ""
+        - description: "Provide the name of the consumer who calls the API"
+        - required: true
+        - default: Null
+        - conventions: 
+          - "<AppName>-<EnvironmentType>-<consumer>"
+
+      - ApiGatewayId:
+        - value: ""
+        - description: "Specifies the ID of the API gateway which will be deploy, APIGatewayId must be referred from outputs of APIGateway product in blueprint"
+        - required: true
+        - default: Null
+
+      - ApiGatewayStageName:
+        - value: ""
+        - description: "Provide the name of Api gateway stages which invokes the backend application, StageName must be referred from outputs of APIGateway product in blueprint"
+        - required: true
+        - default: Null 
+        - constrains: 
+          - "Only lowercase,alphanumeric and hyphen allowed"
+
+  ApiUsageplan: 
+    prerequisites:
+      - ApiKey: "This blueprint must be required api key to authenticating with api clients"
+      - ApiGatewayId: "This parameter is required"
+      - ApiName: "To provide the name of the api"
+      - ApiStageName: "Provide the api stage name"    
+    parameters: 
+      - ApiGatewayId:
+        - value: ""
+        - description: "The ID of the API gateway which will be deployed. GatewayId must be referred from outputs of APIGateway product in blueprint"
+        - required: true
+        - default: Null
+
+      - ApiName:
+        - value: ""
+        - description: "Specifies the Name of the API gateway"
+        - required: true
+        - default: Null
+        - convention: 
+          - "<ApiName>-<ApplicationName>-<EnvironmentType>-<Version>" 
+        - constrains: 
+          - "Only lowercase,alphanumeric and hyphen allowed"
+
+      - ApiGatewayStageName:
+        - value: ""
+        - description: "Provide the name of Api gateway stages which invokes the backend aplication, StageName must be referred from outputs of APIGateway product in blueprint"
+        - required: true
+        - default: Null
+        - constrains: 
+          - "Only lowercase,alphanumeric and hyphen allowed" 
+
+      - QuotaRequired:
+        - value: ""
+        - description: "Specifies that your api needs quota required or not"
+        - required: true
+        - default: Null
+        - allowedValues: 
+          - true
+          - false
+
+      - QuotaLimitValue:
+        - value: ""
+        - description: "The maximum number of requests that users can make within the specified time period"
+        - required: true
+        - default: 10
+
+      - QuotaPeriod:
+        - value: ""
+        - description: "How much time to the api requests limit apply to the api gateway"
+        - required: true
+        - default: 10
+        - allowedValues
+          - "DAY"
+          - "WEEK"
+          - "MONTH"
+
+      - QuotaOffsetValue:
+        - value: ""
+        - description: "The number of requests subtracted from the given limit in the initial time period"
+        - required: true
+        - default: 1
+
+      - ThrottleRequired:
+        - value: ""
+        - description: "Boolean value that you need to Throttle your API calls or not"
+        - required: true 
+        - default: false
+        - allowedValues: 
+          - true 
+          - false 
+      
+      - ThrottleBurstLimit:
+        - value: ""
+        - description: "Indicates max number of requests rate that api will handle in particular time period"
+        - required: true 
+        - default: 10
+
+      - ThrottleRateLimit:
+        - value: ""
+        - description: "Indicates avg number of requests rate per second"
+        - required: true 
+        - default: 10
+
+      - ApiKey:
+        - value: ""
+        - description: "Required to link with usage plan for client authentication. APIKey must be referred from outputs of API-Key product in blueprint."
+        - required: true 
+        - default: "" 
+    
+    ApiVpclink:
+  
+  ApiVpclink: 
+    prerequisites: 
+      - NlbEndPoint: "The NLB needs be created using the  NLB or LoadBalancer product" 
+    parameters:
+      - NlbEndPoint:
+        - value: ""
+        - description: "Provide the ARN of the NLB that is in front of backend application. NLB has to be created using NLB/LoadBalancer Product and arn needs to be referred from outputs"
+        - required: true
+        - default: '' 
+        
+      - ApiName:
+        - value: ""
+        - description: "Provide the prefix which needs to be added to the VPC link name"
+        - required: true
+        - default: Null 
+        - convention: 
+          - <Appcode>-<EnvironmentType>
+        - constrains: 
+          - "Only lowercase,alphanumeric and hyphen allowed" 

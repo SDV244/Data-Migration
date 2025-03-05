@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  ApplicationName:
+    Description: "nmexbd-nonprod-route53_webapp"
+    Type: String
+    MinLength: 3
+    MaxLength: 20
+    Default: 'ngst'
+  EnvironmentType:
+    Description: An environment name that will be prefixed to resource names
+    Type: String
+    MinLength: 2
+    MaxLength: 4
+    AllowedValues:
+    - dev
+    - dev1
+    - dev2
+    - qa
+    - qa1
+    - qa2
+    - stg
+    - stg1
+    - stg2
+    - prod
+    - tcat
+    Default: 'dev'
+  Mappings:
+    'Fn::Transform':
+      Name: 'AWS::Include'
+      Parameters:
+        Location: !Sub s3://nissan-${AWS::AccountId}-${AWS::Region}-app-infra-mapping/${ApplicationName}/parameters.yaml
+  Resources:
+    ## Creates Route 53 Record Set (internal-only) for Treafik service with ALB target ## Sample Block ## Modify as per requirement
+    R53RecordInternal:
+      Type: 'AWS::ServiceCatalog::CloudFormationProvisionedProduct'
+      Properties:
+        ProductName: R53-Records-NissanCloud
+        ProvisionedProductName: !Sub '${ApplicationName}-${EnvironmentType}-alb-r53-map' ## modify the suffix after environment type as per the product to be named. ## it must be unique across the blueprint
+        ProvisioningArtifactName: '1.0'
+        ProvisioningParameters:
+        - Key: RecordName
+          Value: 'traefik-${ApplicationName}.${EnvironmentType}.nonprod'
+        - Key: Scheme
+          Value: 'internal-only'
+        - Key: InternalTarget
+          Value: !GetAtt Cloudfront.Outputs.CloudfrontDomain
+        - Key: RecordType
+          Value: 'Auto'

@@ -1,0 +1,438 @@
+---
+version: v1
+
+resources:
+  DMS:
+    prerequisites:
+      - "Source DB Details: Requires Source DB details like RDS/Onprem host, db name, username, password which will be stored in SourceSecretARN   [Mandatory]"
+      - "Target DB Details: Requires Target DB details like RDS host, db name, username, password. You can use the master secret ARN created by RDS for this   [Mandatory]"
+      - "Target S3: Requires S3 Bucket   [Mandatory]"
+      - "Source pem certificate/ oracle wallet certificate: Requires PEM/ Oracle wallet to enable in transit encryption for Onprem as source endpoint  [Mandatory]"
+      - "Replication Security Group: Requires a security group for DMS replication instance with the DB port enabled from/to source/target endpoint.   [Mandatory]"
+    parameters:
+    ### Done
+      - EnvironmentName:
+        - value: "nmexbd-nonprod"
+        - description: "Its a prefix which will be added to resource names."
+        - required: true
+        - default: Null
+        - convention:
+          - "<Appcode>-<EnvironmentType> (Example: 'ngst-dev')"
+        - constraints:
+          - "Only lowercase,alphanumeric and hyphen allowed."
+          - "Max Length Allowed: 28 characters"
+
+
+    ### Done
+      ##  Replication Instance Parameters ##
+      - AllocatedStorage:
+        - value: 100
+        - description: "The amount of storage (in gigabytes) to be allocated for the replication instance."
+        - required: true
+        - default: 50
+        - recommended_value:
+          - "Provide the required allocated storage as per your use case. Default provided is 50"
+
+    ### Done    
+      - DMSEngineVersion:
+        - value: ""
+        - description: "Provide the DMS replication instance version required"
+        - required: false
+        - default: 3.4.6
+        - recommended_value: 
+          - "Provide the required version as per your use case. Default provided is 3.4.6"
+
+     ### Done 
+      - MultiAz:
+        - value: ""
+        - description: "True/False switch to set Multi-AZ deployment for Replication instance."
+        - required: false
+        - default: false
+        - recommended_value: 
+          - "As per application use case, set this value to 'true'"
+        - constraints: 
+          "Only below values are allowed"
+            - 'true'
+            - 'false'
+      
+      ### Done 
+      - ReplicationInstance:
+        - value: "dms.c5.large"
+        - description: "Select the Relication Instance Type to be launched"
+        - required: true
+        - default: Null
+        - recommended_value:
+          "As per application use case. Choose the instance type based on the CPU and Memory required for the Replication."
+        - constraints:
+          "Only below values are allowed."
+            - dms.t3.small
+            - dms.t3.medium
+            - dms.t3.large
+            - dms.c5.large
+            - dms.c5.xlarge
+            - dms.c5.2xlarge
+            - dms.c5.4xlarge
+            - dms.c5.9xlarge
+            - dms.r5.large
+            - dms.r5.xlarge
+            - dms.r5.2xlarge
+            - dms.r5.4xlarge
+            - dms.r5.8xlarge
+      
+      ### Done
+      - ReplicationSecurityGroup:
+        - value: "Fill this space with the assigned security group"
+        - description: "Group ID of the Security Group to which which the Replication Instance needs to be attached."
+        - required: true
+        - default: Null
+        - recommended_value: 
+          - "Group ID can be referenced from the outputs of SecurityGroup Product. Refer Service Catalog SecurityGroup Runbook Blueprint"
+          - "Open the ingress and egress ports from source endpoint/ to Target endpoint as required."
+        - constraints: 
+          - "Must be an existing Security Group ID"
+     ### Done  
+      - SourceEngineName:
+        - value: "sqlserver"
+        - description: "The type of engine for the source endpoint. "
+        - required: true
+        - default: Null
+        - recommended_value: 
+          - "As per the application usecase, choose the source endpoint type."
+          - "Dont choose postgres/aurora/aurora-postresql if the target also uses any of the same target. DMS captured here is only for heterogenous migartion."
+          - "Choose postgres/aurora/aurora-postresql as source only if the target is S3. You can also migrate it from aurora mysql to auora postgres."
+          - "Dont choose S3 as both source and target together"
+        - constraints: 
+          "Only below values are allowed."
+            - mysql
+            - postgres
+            - oracle
+            - sqlserver 
+            - aurora  (this is aurora mysql)
+            -  aurora-postgresql
+            -  s3
+      
+      ### Done 
+      - SourceSslMode:
+        - value: "verify-ca"
+        - description: "Provide the mode to use for the SSL connection. Ignore this parameter if the source engine is Aurora mysql"
+        - required: false
+        - default: "require"
+        - recommended_value: 
+          - "As per the application usecase, choose the SSL type"
+        - constraints:
+          "Only below values are allowed"
+            - require
+            - verify-ca
+            - verify-full
+      
+      ### Pendiente, no sabemos el host
+      - SourceEndpoint:
+        - value: ""
+        - description: "Provide the Source RDS Hostname/ OnPrem IP Address."
+        - required: [Required for Database  source]
+        - default: ''
+        - recommended_value: 
+          - "Leave as default for S3 source"
+        - constraints: Null
+      
+      ### Pendiente, no sabemos el nombre de la DB
+      - SourceDatabaseName:
+        - value: ""
+        - description: "Provide the database name for the source endpoint."
+        - required: [Required for Database source]
+        - default: ''
+        - recommended_value: 
+          - Provide the correct database name which used as source.
+          - Leave as default for S3 source
+        - constraints: Null
+      
+      ### Pendiente, no sabemos la contraseña
+      - SourcePassword:
+        - value: ""
+        - description: "Provide the password for the source endpoint.Leave this parameter and use the default dummy one only. Original password will be fetched form secrets manager."
+        - required: false
+        - default: "dummypassword"
+        - recommended_value: 
+          - "Leave the default value as it is."
+          - "This is a dummy password being used since this parameter is mandatory for creating the endpoint. The actual password will be fetched from secrets manager with the help of custom lambda used."
+        - constraints: Null
+      
+      ### Pendiente, no tenemos secreto todavía
+      - SourceSecretARN:
+        - value: ""
+        - description: "Provide the secrets manager ARN for the source endpoint."
+        - required: [Required for Database source]
+        - default: ''
+        - recommended_value: 
+          - "Provide the secret manager ARN where the source DB details are stored. (already created)
+          - "The source seceret should contain the below key values (example):"
+            - "password": "******"
+            - "username": "root"
+            - "port": "5432"
+            - "host": "dms-postgres-source.cluster-******.us-east-1.rds.amazonaws.com"
+        - constraints:
+          - "Must be a valid Secret ARN"
+      
+      ### No aplica
+      - SourceExtraConnectionAttributes:
+        - value: ""
+        - description: "Provide the source additional attributes associated with the connection."
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "Each attribute is specified as a name-value pair associated by an equal sign (=). Multiple attributes are separated by a semicolon (;) with no additional white space. "
+        - constraints: Null
+
+      ### No aplica
+      - SourceS3BucketName:
+        - value: ""
+        - description: "Provide the name of the S3 bucket which is the source for replication."
+        - required: [Required only for source S3]
+        - default: ''
+        - recommended_value: 
+          - "Provide the name of the S3 bucket which is the source for replication"
+        - constraints: Null
+
+      ### No aplica
+      - SourceBucketFolder:
+        - value: ""
+        - description: "Provide the folder where the replication object is stored in S3 bucket"
+        - required: [Required only for source S3]
+        - default: ''
+        - recommended_value: 
+          - "If provided, the files would be referred from S3://<SourceS3BucketName>/<SourceBucketFolder>"
+        - constraints: Null
+
+      ### Pendiente, preguntar
+      - SourceCdcPath:
+        - value: ""
+        - description: "Provide the path where the change files are located in S3."
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "Only required if the MigrationType is cdc or full-load-and-cdc"
+          - "If <SourceBucketFolder> is provided, the CDC path would be taken as <SourceBucketFolder>/<SourceCdcPath>"
+        - constraints: Null
+
+      ### No aplica
+      - SourceS3TableDefinition:
+        - value: ""
+        - description: "Provide JSON value denoting how DMS should process the data present in S3."
+        - required: [Required only for S3 source]
+        - default: ''
+        - recommended_value: 
+          - "Refer documentation in https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.S3.html for details"
+        - constraints: Null
+
+      ### Done
+      ##  Target Endpoint Common Parameters ##
+      - TargetEngineName:
+        - value: "s3"
+        - description: "The type of engine for the target endpoint. ('aurora' denotes Aurora MySQL, 'mysql' denotes RDS MySQL, 'postgres' denotes RDS PostgresSQL)"
+        - required: true
+        - default: Null
+        - recommended_value: 
+          - "As per the application usecase, choose the target endpoint type."
+        - constraints: 
+          - "Only below values are allowed"
+            - postgres
+            - aurora-postgresql
+            - s3
+            - aurora
+            - mysql
+
+      ### Done
+      - TargetExtraConnectionAttributes:
+        - value: ""
+        - description: "Provide the target additional attributes associated with the connection."
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "Each attribute is specified as a name-value pair associated by an equal sign (=). Multiple attributes are separated by a semicolon (;) with no additional white space."
+        - constraints: Null
+      
+      ### No aplica
+      ##  RDS Target Endpoint Specific Parameters ##
+      - TargetEndpoint:
+        - value: ""
+        - description: "Provide the Target RDS Endpoint."
+        - required: true
+        - default: Null
+        - recommended_value: 
+          - Null
+        - constraints: Null
+
+      ### No aplica
+      - TargetDatabaseName:
+        - value: ""
+        - description: "Provide the database name for the target endpoint."
+        - required: true
+        - default: Null
+        - recommended_value: 
+          - "Provide the correct database name which used as target."
+        - constraints: Null
+
+      ### No aplica
+      - TargetPassword:
+        - value: ""
+        - description: "Provide the password for the target endpoint.Leave this parameter and use the default dummy one only. Original password will be fetched form secrets manager."
+        - required: false
+        - default: "dummypassword"
+        - recommended_value: 
+          - "Leave the default value as it is."
+          - "This is a dummy password being used since this parameter is mandatory for creating the endpoint. The actual password will be fetched from secrets manager with the help of custom lambda used."
+        - constraints: Null
+
+      ### No aplica  
+      - TargetSecretARN:
+        - value: ""
+        - description: "Provide the secrets manager ARN for the target endpoint."
+        - required: true
+        - default: Null
+        - recommended_value: 
+          - "Provide the secret manager ARN where the target DB details are stored."
+          - "You can use the master secret created by the RDS template for this."
+        - constraints: Null
+      
+      ### Done
+      ##  S3 Target Endpoint Specific Parameters ##
+      - CsvDelimiter:
+        - value: ""
+        - description: "Provide the delimiter used to separate columns in the .csv file."
+        - required: false
+        - default: ","
+        - recommended_value: 
+          - "Provide the delimiter type required as per use case."
+        - constraints: Null
+
+      ### Done  
+      - CsvRowDelimiter:
+        - value: ""
+        - description: "Provide the delimiter used to separate rows in the .csv file in the .csv file."
+        - required: false
+        - default: '\n'
+        - recommended_value: 
+          - "Provide the delimiter type required as per use case."
+        - constraints: Null
+
+       ### Pendiente, preguntar nombre 
+      - TargetS3BucketName:
+        - value: ""
+        - description: "Provide the name of the target S3 bucket."
+        - required: false
+        - default: Null
+        - recommended_value: Null
+        - constraints: Null
+
+      ### Pendiente, preguntar folder  
+      - TargetBucketFolder:
+        - value: ""
+        - description: "Provide the bucket folder for the target S3 bucket."
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "Provide the required folder name.  If provided, tables are created in the path bucketFolder/schema_name/table_name/. If this parameter isn't specified, then the path used is schema_name/table_name/."
+        - constraints: Null
+
+      ### Done  
+      - S3CompressionType:
+        - value: ""
+        - description: "Provide the compression type required for the target files in s3. Setting the parameter to none leaves the files uncompressed."
+        - required: false
+        - default: 'none'
+        - recommended_value: 
+          - "Provide the compression type as per use case."
+        - constraints: 
+          - "Only below values are allowed"
+            - none
+            - gzip
+      
+      ### Done
+      ##  S3 Target Endpoint Specific Parameters ##  
+      - MigrationType:
+        - value: "full-load-and-cdc"
+        - description: "Provide the migration type."
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "Select the migration type according to use case."
+        - constraints: 
+          - "Only below values are allowed"
+            - cdc
+            - full-load
+            - full-load-and-cdc
+      
+      ### Preguntar   
+      - ReplicationTaskSettings:
+        - value: ""
+        - description: "Provide the overall settings for the task in JSON format."
+        - required: false
+        - default: Null
+        - recommended_value:
+          - "Example"
+            - '{"Logging": {"EnableLogging": false}}'
+        - constraints: Null
+        
+      - TableMappings:
+        - value: ""
+        - description: "Provide the table mappings for the task in JSON format."
+        - required: true
+        - default: Null
+        - recommended_value: 
+          - "A sample table mapping is shown below"
+            - '{"rules": [{"rule-type": "transformation", "rule-id": "1", "rule-name": "Default Lowercase Table Rule", "rule-action": "convert-lowercase", "rule-target": "table", "object-locator": {"schema-name": "%","table-name": "%"} }, {"rule-type": "transformation","rule-id": "2", "rule-name": "Default Lowercase Schema rule", "rule-action": "convert-lowercase", "rule-target": "schema", "object-locator": {"schema-name": "%"}}, {"rule-type": "selection", "rule-id": "3", "rule-action": "include", "object-locator": {"schema-name": "%", "table-name": "%"}, "rule-name": "3"}]}'
+        - constraints: Null
+        
+      - CdcStartPosition:
+        - value: ""
+        - description: "Provide when you want a change data capture (CDC) operation to start. "
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "The value can be in date, checkpoint, or LSN/SCN format."
+            - 'Date Example: --cdc-start-position “2018-03-08T12:12:12”'
+            - 'Checkpoint Example: --cdc-start-position "checkpoint:V1#27#mysql-bin-changelog.157832:1975:-1:2002:677883278264080:mysql-bin-changelog.157832:1876#0#0#*#0#93"'
+            - 'LSN Example: --cdc-start-position “mysql-bin-changelog.000024:373”'
+        - constraints: Null
+        
+      - CdcStopPosition:
+        - value: ""
+        - description: "Provide when you want a change data capture (CDC) operation to stop."
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "The value can be either server time or commit time."
+            - 'Server time example: --cdc-stop-position “server_time:2018-02-09T12:12:12”'
+            - 'Commit time example: --cdc-stop-position “commit_time: 2018-02-09T12:12:12“'
+        - constraints: Null
+      
+      # Certificate parameters for Source endpoint
+      - CertificateBucketName:
+        - value: ""
+        - description: "Provide the bucket name where the certificate is stored."
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "Make sure you have created a seperate bucket for this purpose nad keep the certificate in parent location."
+        - constraints: Null
+        
+      - CertificateFileName:
+        - value: ""
+        - description: "Provide the file name. The file type should be .sso or .pem"
+        - required: false
+        - default: Null
+        - recommended_value: 
+          - "Make sure you keep the certificate in parent location, and not under a folder."
+        - constraints: Null
+      
+      - CertificateType:
+        - value: ""
+        - description: "Provide the migration type."
+        - required: false
+        - default: 'none'
+        - recommended_value: "Select the certificate type according to use case. "
+        - constraints: 
+          - "Only below values are allowed"
+            - "none"
+            - ".pem™
+            - ".sso"

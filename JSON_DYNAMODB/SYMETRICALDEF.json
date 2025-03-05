@@ -1,0 +1,199 @@
+{
+  "FileType": {
+    "S": "xlsx"
+  },
+  "FileName": {
+    "S": "SYMMETRICAL.xlsx"
+  },
+  "FileColumn": {
+    "M": {
+      "Sheets": {
+        "M": {
+          "DLR": {
+            "L": [
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "FSCL_YR_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "MNTH_NB"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DLR_CD"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "AREA"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "INDICATOR"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": true
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SIGN"
+                  },
+                  "DataType": {
+                    "S": "string"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NUMERATOR"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DENOMINATOR"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "ACTUAL"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TARGET"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "CDO_PERCENTAGE"
+                  },
+                  "DataType": {
+                    "S": "double"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "user": {
+    "S": "Juan"
+  }
+}
