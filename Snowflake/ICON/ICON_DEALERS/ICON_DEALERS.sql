@@ -1,0 +1,19 @@
+CREATE OR REPLACE TABLE ICON_DEALERS (
+    DLR_CD INT,
+    DSTRBR STRING,
+    GROUP STRING,
+    ZONE STRING,
+    SALES STRING,
+    AFTER_SALES STRING,
+    PREOWNED STRING,
+    FLEETS STRING,
+    MANAGERIAL STRING,
+    HYP STRING,
+    WHOLESALE STRING,
+    FOM STRING,
+    DOM DOUBLE,
+    HashKey STRING,              -- Added column for unique row identifier or hash
+    audit_loaded_date TIMESTAMP  -- Added column for tracking when the row was loaded
+);
+
+GRANT SELECT, INSERT, UPDATE, REFERENCES ON SDDBMTS1.NMX_MTS1_STG.ICON_DEALERS TO ROLE "ENTER ROLE"_$(ENV);

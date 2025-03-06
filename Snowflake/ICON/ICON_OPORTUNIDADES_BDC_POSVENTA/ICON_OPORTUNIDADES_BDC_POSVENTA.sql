@@ -1,0 +1,21 @@
+CREATE OR REPLACE TABLE ICON_OPORTUNIDADES_BDC_POSVENTA (
+    FSCL_YR_NB INT,
+    DLR_CD INT,
+    DSTRBR STRING,
+    APRIL INT,
+    MAY DOUBLE,
+    JUNE DOUBLE,
+    JULY DOUBLE,
+    AUGUST INT,
+    SEPTEMBER INT,
+    OCTOBER INT,
+    NOVEMBER INT,
+    DECEMBER INT,
+    JANUARY INT,
+    FEBRUARY INT,
+    MARCH INT,
+    HashKey STRING,              -- Added column for unique row identifier or hash
+    audit_loaded_date TIMESTAMP  -- Added column for tracking when the row was loaded
+);
+
+GRANT SELECT, INSERT, UPDATE, REFERENCES ON SDDBMTS1.NMX_MTS1_STG.ICON_OPORTUNIDADES_BDC_POSVENTA TO ROLE "ENTER ROLE"_$(ENV);
