@@ -49,7 +49,7 @@
                     "S": "SAMPLE_ID"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -65,7 +65,7 @@
                     "S": "SURVEY_ID"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -129,7 +129,7 @@
                     "S": "PROCESSING_DATE"
                   },
                   "DataType": {
-                    "S": "string"
+                    "S": "date"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -145,7 +145,7 @@
                     "S": "JD_POWER_SURVEY_DATE"
                   },
                   "DataType": {
-                    "S": "string"
+                    "S": "date"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -241,13 +241,13 @@
                     "S": "MATRIX_KEY"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
                   },
                   "KeyColumn": {
-                    "BOOL": false
+                    "BOOL": true
                   }
                 }
               },
@@ -257,13 +257,13 @@
                     "S": "DISTRIBUTOR_KEY"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
                   },
                   "KeyColumn": {
-                    "BOOL": false
+                    "BOOL": true
                   }
                 }
               },
@@ -417,7 +417,7 @@
                     "S": "NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -433,7 +433,7 @@
                     "S": "NPS2_RATING_REASONS"
                   },
                   "DataType": {
-                    "S": "string"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -465,7 +465,7 @@
                     "S": "SI1_A_EASE_OF_SERVICE_APPOINTMENT_SCHEDULING"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -481,7 +481,7 @@
                     "S": "SI1_B_SPEED_OF_VEHICLE_RECEIPT"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -497,7 +497,7 @@
                     "S": "SI1_C_OVERALL_SERVICE_INITIATION_PROCESS_RATING"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -593,7 +593,7 @@
                     "S": "SA3_A_SERVICE_ADVISOR_FRIENDLINESS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -609,7 +609,7 @@
                     "S": "SA3_B_SERVICE_ADVISOR_KNOWLEDGE"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -625,7 +625,7 @@
                     "S": "SA3_C_TRUST_IN_THE_ATTENDING_STAFF"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -641,7 +641,7 @@
                     "S": "SA3_D_OVERALL_SERVICE_ADVISOR_RATING"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -657,7 +657,7 @@
                     "S": "SF1_A_EASE_OF_ACCESS_AND_EXIT_FROM_SERVICE_CENTER"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -673,7 +673,7 @@
                     "S": "SF1_B_SERVICE_CENTER_CLEANLINESS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -689,7 +689,7 @@
                     "S": "SF1_C_COMFORT_AND_COURTESIES"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -705,7 +705,7 @@
                     "S": "SF1_D_OVERALL_FACILITY_RATING"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -833,7 +833,7 @@
                     "S": "VD7_A_SPEED_OF_DELIVERY_PROCESS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -849,7 +849,7 @@
                     "S": "VD7_C_FAIRNESS_OF_CHARGE"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -865,7 +865,7 @@
                     "S": "VD7_B_OVERALL_DELIVERY_PROCESS_RATING"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -961,7 +961,7 @@
                     "S": "SQ4_A_TOTAL_TIME_REQUIRED_TO_COMPLETE_SERVICE"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -977,7 +977,7 @@
                     "S": "SQ4_B_VEHICLE_CLEANLINESS_AND_CONDITION_AT_DELIVERY"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -993,7 +993,7 @@
                     "S": "SQ4_C_OVERALL_SERVICE_QUALITY_RATING"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1009,7 +1009,7 @@
                     "S": "SE1_OVERALL_SERVICE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1041,7 +1041,7 @@
                     "S": "SE3_OVERALL_OPINION_OF_NISSAN_AS_A_BRAND"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1057,7 +1057,7 @@
                     "S": "SATISFACTION_INDEX"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1073,7 +1073,7 @@
                     "S": "SERVICE_INITIATION"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1089,7 +1089,7 @@
                     "S": "DEALER_STAFF"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1105,7 +1105,7 @@
                     "S": "FACILITIES"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1121,7 +1121,7 @@
                     "S": "DELIVERY"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1137,7 +1137,7 @@
                     "S": "QUALITY"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1189,7 +1189,7 @@
                     "S": "MATRIX_KEY"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1205,7 +1205,7 @@
                     "S": "DLR_CD"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1301,7 +1301,7 @@
                     "S": "TOTAL_RECORDS_RECEIVED"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1317,7 +1317,7 @@
                     "S": "NO_CONTACT"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1333,7 +1333,7 @@
                     "S": "CONTACT"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1349,7 +1349,7 @@
                     "S": "CLEANING_RECORDS_ERRORS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1365,7 +1365,7 @@
                     "S": "BOUNCED"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1381,7 +1381,7 @@
                     "S": "SUCCESSFULLY_SENT"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1397,7 +1397,7 @@
                     "S": "SENT_WHATSAPP"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1413,7 +1413,7 @@
                     "S": "SENT_EMAIL"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1429,7 +1429,7 @@
                     "S": "COMPLETED"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1445,7 +1445,7 @@
                     "S": "COMPLETED_WHATSAPP"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1461,7 +1461,7 @@
                     "S": "COMPLETED_EMAIL"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1477,7 +1477,7 @@
                     "S": "RESPONSE_RATE_TOTAL_RECORDS"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1493,7 +1493,7 @@
                     "S": "RESPONSE_RATE_SUCCESSFULLY_SENT"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1509,7 +1509,7 @@
                     "S": "CBD"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1525,7 +1525,7 @@
                     "S": "RANKING_BY_DEALER"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1541,7 +1541,7 @@
                     "S": "SCORE_0_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1557,7 +1557,7 @@
                     "S": "SCORE_1_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1573,7 +1573,7 @@
                     "S": "SCORE_2_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1589,7 +1589,7 @@
                     "S": "SCORE_3_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1605,7 +1605,7 @@
                     "S": "SCORE_4_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1621,7 +1621,7 @@
                     "S": "SCORE_5_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1637,7 +1637,7 @@
                     "S": "SCORE_6_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1653,7 +1653,7 @@
                     "S": "SCORE_7_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1669,7 +1669,7 @@
                     "S": "SCORE_8_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1685,7 +1685,7 @@
                     "S": "SCORE_9_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1701,7 +1701,7 @@
                     "S": "SCORE_10_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1717,7 +1717,7 @@
                     "S": "DETRACTORS_0_6_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1733,7 +1733,7 @@
                     "S": "NEUTRALS_7_8_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1749,7 +1749,7 @@
                     "S": "PROMOTERS_9_10_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1765,7 +1765,7 @@
                     "S": "TOTAL_VOC1_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1781,7 +1781,7 @@
                     "S": "SERVICE_EXPERIENCE_SATISFACTION_NPS"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1797,7 +1797,7 @@
                     "S": "YES_SQ1_WORK_COMPLETED_RIGHT_FIRST_TIME"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1813,7 +1813,7 @@
                     "S": "NO_SQ1_WORK_COMPLETED_RIGHT_FIRST_TIME"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1829,7 +1829,7 @@
                     "S": "TOTAL_SQ1_WORK_COMPLETED_RIGHT_FIRST_TIME"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1845,7 +1845,7 @@
                     "S": "SCORE_0_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1861,7 +1861,7 @@
                     "S": "SCORE_1_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1877,7 +1877,7 @@
                     "S": "SCORE_2_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1893,7 +1893,7 @@
                     "S": "SCORE_3_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1909,7 +1909,7 @@
                     "S": "SCORE_4_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1925,7 +1925,7 @@
                     "S": "SCORE_5_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1941,7 +1941,7 @@
                     "S": "SCORE_6_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1957,7 +1957,7 @@
                     "S": "SCORE_7_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1973,7 +1973,7 @@
                     "S": "SCORE_8_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -1989,7 +1989,7 @@
                     "S": "SCORE_9_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2005,7 +2005,7 @@
                     "S": "SCORE_10_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2021,7 +2021,7 @@
                     "S": "DETRACTORS_0_6_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2037,7 +2037,7 @@
                     "S": "NEUTRALS_7_8_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2053,7 +2053,7 @@
                     "S": "PROMOTERS_9_10_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2069,7 +2069,7 @@
                     "S": "TOTAL_NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2085,7 +2085,7 @@
                     "S": "RECOMMENDATION_NPS"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2101,7 +2101,7 @@
                     "S": "YES_VOC2_RETURN_FOR_NEXT_SERVICE_IN_DEALER"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2117,7 +2117,7 @@
                     "S": "NO_VOC2_RETURN_FOR_NEXT_SERVICE_IN_DEALER"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2133,7 +2133,7 @@
                     "S": "TOTAL_VOC2_RETURN_FOR_NEXT_SERVICE_IN_DEALER"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2149,7 +2149,7 @@
                     "S": "SCORE_0_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2165,7 +2165,7 @@
                     "S": "SCORE_1_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2181,7 +2181,7 @@
                     "S": "SCORE_2_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2197,7 +2197,7 @@
                     "S": "SCORE_3_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2213,7 +2213,7 @@
                     "S": "SCORE_4_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2229,7 +2229,7 @@
                     "S": "SCORE_5_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2245,7 +2245,7 @@
                     "S": "SCORE_6_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2261,7 +2261,7 @@
                     "S": "SCORE_7_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2277,7 +2277,7 @@
                     "S": "SCORE_8_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2293,7 +2293,7 @@
                     "S": "SCORE_9_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2309,7 +2309,7 @@
                     "S": "SCORE_10_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2325,7 +2325,7 @@
                     "S": "DETRACTORS_0_6_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2341,7 +2341,7 @@
                     "S": "NEUTRALS_7_8_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2357,7 +2357,7 @@
                     "S": "PROMOTERS_9_10_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2373,7 +2373,7 @@
                     "S": "TOTAL_VOC3_SERVICE_EXPERIENCE_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2389,7 +2389,7 @@
                     "S": "EXPECTATIONS_SERVICE_PROCESS_NPS"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2405,7 +2405,7 @@
                     "S": "LEVEL_1_CLOSED_ALERTS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2421,7 +2421,7 @@
                     "S": "LEVEL_2_CLOSED_ALERTS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2437,7 +2437,7 @@
                     "S": "LEVEL_3_CLOSED_ALERTS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2453,7 +2453,7 @@
                     "S": "TOTAL_CLOSED_ALERTS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2469,7 +2469,7 @@
                     "S": "LEVEL_1_PERCENT_CLOSED_TICKETS"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2485,7 +2485,7 @@
                     "S": "OPEN_TICKETS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2501,7 +2501,7 @@
                     "S": "NPS_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2517,7 +2517,7 @@
                     "S": "DETRACTORS_0_6_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2533,7 +2533,7 @@
                     "S": "NEUTRALS_7_8_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2549,7 +2549,7 @@
                     "S": "PROMOTERS_9_10_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2565,7 +2565,7 @@
                     "S": "NPS_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2581,7 +2581,7 @@
                     "S": "DETRACTORS_0_6_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2597,7 +2597,7 @@
                     "S": "NEUTRALS_7_8_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2613,7 +2613,7 @@
                     "S": "PROMOTERS_9_10_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2629,7 +2629,7 @@
                     "S": "COEFFICIENT_3RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2645,7 +2645,7 @@
                     "S": "COEFFICIENT_6RM_COEFFICIENT_SERVICE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2697,7 +2697,7 @@
                     "S": "SAMPLE_ID"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2713,7 +2713,7 @@
                     "S": "SURVEY_ID"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2793,7 +2793,7 @@
                     "S": "PROCESSING_DATE"
                   },
                   "DataType": {
-                    "S": "string"
+                    "S": "date"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2809,7 +2809,7 @@
                     "S": "SURVEY_START_DATE"
                   },
                   "DataType": {
-                    "S": "string"
+                    "S": "date"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2825,7 +2825,7 @@
                     "S": "VOC_SURVEY_DATE"
                   },
                   "DataType": {
-                    "S": "string"
+                    "S": "date"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2921,7 +2921,7 @@
                     "S": "MATRIX_KEY"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -2937,7 +2937,7 @@
                     "S": "DISTRIBUTOR_KEY"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3097,7 +3097,7 @@
                     "S": "VOC1_PURCHASE_EXPERIENCE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3161,7 +3161,7 @@
                     "S": "NPS1_RECOMMENDATION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3193,7 +3193,7 @@
                     "S": "VOC4_TEST_DRIVE_SATISFACTION"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3241,7 +3241,7 @@
                     "S": "VOC5_PURCHASE_PROCESS_EXPECTATIONS"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3373,7 +3373,7 @@
                     "S": "MATRIX_KEY"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3389,7 +3389,7 @@
                     "S": "DLR_CD"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3485,7 +3485,7 @@
                     "S": "TOTAL_RECEIVED_RECORDS"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3501,7 +3501,7 @@
                     "S": "NO_CONTACT"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3517,7 +3517,7 @@
                     "S": "YES_CONTACT"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3533,7 +3533,7 @@
                     "S": "CLEANED_RECORDS_ERRORS"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3549,7 +3549,7 @@
                     "S": "BOUNCED"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3565,7 +3565,7 @@
                     "S": "SUCCESSFULLY_SENT"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3581,7 +3581,7 @@
                     "S": "SENT_WHATSAPP"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3597,7 +3597,7 @@
                     "S": "SENT_EMAIL"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3613,7 +3613,7 @@
                     "S": "COMPLETED"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3629,7 +3629,7 @@
                     "S": "SURVEYS_COMPLETED_WHATSAPP"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3645,7 +3645,7 @@
                     "S": "SURVEYS_COMPLETED_EMAIL"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3661,7 +3661,7 @@
                     "S": "RESPONSE_RATE_TOTAL_RECORDS"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3677,7 +3677,7 @@
                     "S": "RESPONSE_RATE_SUCCESSFULLY_SENT"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3693,7 +3693,7 @@
                     "S": "CBD"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3709,7 +3709,7 @@
                     "S": "DISTRIBUTOR_RANKING"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3722,10 +3722,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "NPS_RECOMMENDATION"
+                    "S": "SCORE_0_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3738,10 +3738,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "NPS_AVERAGE_RECOMMENDATION"
+                    "S": "SCORE_1_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3754,10 +3754,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "TEST_DRIVE_NPS"
+                    "S": "SCORE_2_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3770,10 +3770,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "TEST_DRIVE_AVERAGE"
+                    "S": "SCORE_3_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3786,10 +3786,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "PURCHASE_PROCESS_EXPECTATION_NPS"
+                    "S": "SCORE_4_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3802,10 +3802,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "PURCHASE_PROCESS_EXPECTATION_AVERAGE"
+                    "S": "SCORE_5_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3818,10 +3818,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "LEVEL_1_CLOSED_TICKETS"
+                    "S": "SCORE_6_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3834,10 +3834,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "LEVEL_2_CLOSED_TICKETS"
+                    "S": "SCORE_7_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3850,10 +3850,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "LEVEL_3_CLOSED_TICKETS"
+                    "S": "SCORE_8_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3866,10 +3866,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "TOTAL_CLOSED_TICKETS"
+                    "S": "SCORE_9_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3882,10 +3882,10 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "LEVEL_1_PERCENT_CLOSED_TICKETS"
+                    "S": "SCORE_10_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3898,10 +3898,42 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "TICKETS_OPEN"
+                    "S": "DETRACTORS_0_6_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_VOC1_SATISFACTION_PURCHASE_EXPERIENCE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL"
+                  },
+                  "DataType": {
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3917,7 +3949,951 @@
                     "S": "SATISFACTION_PURCHASE_EXPERIENCE_NPS"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YES_VOC2_RETURN_FOR_NEW_PURCHASE_OR_SERVICE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NO_VOC2_RETURN_FOR_NEW_PURCHASE_OR_SERVICE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_VOC2_RETURN_FOR_NEW_PURCHASE_OR_SERVICE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_0_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_1_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_2_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_3_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_4_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_5_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_6_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_7_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_8_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_9_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_NPS1_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NPS_AVERAGE_RECOMMENDATION"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "YES_VOC3_OFFERED_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NO_VOC3_OFFERED_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_VOC3_OFFERED_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_0_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_1_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_2_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_3_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_4_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_5_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_6_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_7_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_8_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_9_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_10_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_VOC4_SATISFACTION_TEST_DRIVE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TEST_DRIVE_NPS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TEST_DRIVE_AVERAGE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_0_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_1_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_2_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_3_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_4_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_5_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_6_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_7_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_8_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_9_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "SCORE_10_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_VOC5_EXPECTATIONS_PURCHASE_PROCESS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PURCHASE_PROCESS_EXPECTATION_NPS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PURCHASE_PROCESS_EXPECTATION_AVERAGE"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_1_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_2_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_3_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TOTAL_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "LEVEL_1_PERCENT_CLOSED_TICKETS"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "TICKETS_OPEN"
+                  },
+                  "DataType": {
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3933,7 +4909,55 @@
                     "S": "NPS_3RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_3RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_3RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_3RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3949,7 +4973,87 @@
                     "S": "NPS_6RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "score_10_nps1_recommendation"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "neutrals_7_8_voc1_satisfaction_purchase_experience"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "DETRACTORS_0_6_6RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "NEUTRALS_7_8_6RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "float"
+                  },
+                  "DropColumn": {
+                    "BOOL": false
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "PROMOTERS_9_10_6RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
+                  },
+                  "DataType": {
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3965,7 +5069,7 @@
                     "S": "COEFFICIENT_3RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -3981,7 +5085,7 @@
                     "S": "COEFFICIENT_6RM_SATISFACTION_PURCHASE_EXPERIENCE_COEFFICIENT"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
