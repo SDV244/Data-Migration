@@ -49,7 +49,7 @@
                     "S": "DLR_CD"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -113,7 +113,7 @@
                     "S": "NUMERATOR"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -129,7 +129,7 @@
                     "S": "DENOMINATOR"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -145,7 +145,7 @@
                     "S": "ACTUAL"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -161,7 +161,7 @@
                     "S": "TARGET"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -177,7 +177,7 @@
                     "S": "CDO_PERCENTAGE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false

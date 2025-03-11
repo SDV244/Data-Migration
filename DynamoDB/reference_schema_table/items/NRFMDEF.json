@@ -129,7 +129,7 @@
                     "S": "CONTRACTS_TARGET"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -145,7 +145,7 @@
                     "S": "RETAIL_CONTRACTS"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -161,7 +161,7 @@
                     "S": "RETAIL_SALES_NMEX"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -177,7 +177,7 @@
                     "S": "SELECTIVITY_LEASING"
                   },
                   "DataType": {
-                    "S": "integer"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -193,7 +193,7 @@
                     "S": "EXTENDED_WARRANTY_PERCENTAGE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false

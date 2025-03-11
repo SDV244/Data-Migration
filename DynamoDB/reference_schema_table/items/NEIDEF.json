@@ -49,7 +49,7 @@
                     "S": "DLR_CD"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -113,7 +113,7 @@
                     "S": "SERVICE_RESULT"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -581,7 +581,7 @@
                     "S": "DLR_CD"
                   },
                   "DataType": {
-                    "S": "int"
+                    "S": "string"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -645,7 +645,7 @@
                     "S": "R_SALES"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -661,7 +661,7 @@
                     "S": "R_SERVICE"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -677,7 +677,7 @@
                     "S": "R_EFFECTIVENESS"
                   },
                   "DataType": {
-                    "S": "double"
+                    "S": "float"
                   },
                   "DropColumn": {
                     "BOOL": false
@@ -706,7 +706,7 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "EFFECTIVE_OPP_RECEPTION_2_2_1_2_REGISTER_CLIENT"
+                    "S": "nredi_sales_and_5s_2_8_1_3_sales_structure"
                   },
                   "DataType": {
                     "S": "int"
@@ -722,7 +722,135 @@
               {
                 "M": {
                   "ColumnName": {
-                    "S": "EFFECTIVE_OPP_RECEPTION_2_2_1_3_INTRODUCE_CLIENT_APV"
+                    "S": "effective_opportunity_2_2_1_2_customer_registration"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "nredi_sales_and_5s_2_7_1_3_vehicle_delivery_area_maintenance"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "gate_4_2_6_1_7_quality_management_system"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "effective_opportunity_2_2_2_2_home_consultation_tool"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "nredi_sales_and_5s_2_7_2_1_self_evaluation_and_follow_up"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "gate_4_2_6_1_5_pre_delivery_inspection"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "business_development_center_2_1_4_1_appointment_confirmation"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "nredi_sales_and_5s_2_8_1_1_required_sales_advisor"
+                  },
+                  "DataType": {
+                    "S": "int"
+                  },
+                  "DropColumn": {
+                    "BOOL": true
+                  },
+                  "KeyColumn": {
+                    "BOOL": false
+                  }
+                }
+              },
+              {
+                "M": {
+                  "ColumnName": {
+                    "S": "effective_opportunity_2_2_1_3_apv_assignment"
                   },
                   "DataType": {
                     "S": "int"
@@ -739,22 +867,6 @@
                 "M": {
                   "ColumnName": {
                     "S": "EFFECTIVE_OPP_CONSULT_2_2_2_1_IDENTIFY_NEEDS"
-                  },
-                  "DataType": {
-                    "S": "int"
-                  },
-                  "DropColumn": {
-                    "BOOL": true
-                  },
-                  "KeyColumn": {
-                    "BOOL": false
-                  }
-                }
-              },
-              {
-                "M": {
-                  "ColumnName": {
-                    "S": "EFFECTIVE_OPP_CONSULT_2_2_2_2_TOOLS_HOME"
                   },
                   "DataType": {
                     "S": "int"
@@ -947,38 +1059,6 @@
                 "M": {
                   "ColumnName": {
                     "S": "ECON_PROPOSAL_SALE_CLOSURE_2_4_2_2_DOC_CHECKLIST"
-                  },
-                  "DataType": {
-                    "S": "int"
-                  },
-                  "DropColumn": {
-                    "BOOL": true
-                  },
-                  "KeyColumn": {
-                    "BOOL": false
-                  }
-                }
-              },
-              {
-                "M": {
-                  "ColumnName": {
-                    "S": "ECON_PROPOSAL_SALE_CLOSURE_2_4_2_3_CREDIT_OPTIONS"
-                  },
-                  "DataType": {
-                    "S": "int"
-                  },
-                  "DropColumn": {
-                    "BOOL": true
-                  },
-                  "KeyColumn": {
-                    "BOOL": false
-                  }
-                }
-              },
-              {
-                "M": {
-                  "ColumnName": {
-                    "S": "ECON_PROPOSAL_SALE_CLOSURE_2_4_2_4_CLOSING_STRATEGY"
                   },
                   "DataType": {
                     "S": "int"

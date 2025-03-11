@@ -33,7 +33,7 @@
                       "S": "DLR_CD"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "string"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -81,7 +81,7 @@
                       "S": "APRIL_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -97,7 +97,7 @@
                       "S": "MAY_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -113,7 +113,7 @@
                       "S": "JUNE_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -129,7 +129,7 @@
                       "S": "JULY_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -145,7 +145,7 @@
                       "S": "AUGUST_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -161,7 +161,7 @@
                       "S": "SEPTEMBER_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -177,7 +177,7 @@
                       "S": "OCTOBER_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -193,7 +193,7 @@
                       "S": "NOVEMBER_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -209,7 +209,7 @@
                       "S": "DECEMBER_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -225,7 +225,7 @@
                       "S": "JANUARY_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -241,7 +241,7 @@
                       "S": "FEBRUARY_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -257,7 +257,7 @@
                       "S": "MARCH_ORDERS_PUB_GAR_INT"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -273,7 +273,7 @@
                       "S": "APRIL_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -289,7 +289,7 @@
                       "S": "MAY_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -305,7 +305,7 @@
                       "S": "JUNE_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -321,7 +321,7 @@
                       "S": "JULY_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -337,7 +337,7 @@
                       "S": "AUGUST_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -353,7 +353,7 @@
                       "S": "SEPTEMBER_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -369,7 +369,7 @@
                       "S": "OCTOBER_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -385,7 +385,7 @@
                       "S": "NOVEMBER_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -401,7 +401,7 @@
                       "S": "DECEMBER_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -417,7 +417,7 @@
                       "S": "JANUARY_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -433,7 +433,7 @@
                       "S": "FEBRUARY_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -449,7 +449,7 @@
                       "S": "MARCH_ORDERS_PUB_GAR"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -485,7 +485,7 @@
                       "S": "DLR_CD"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "string"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -533,7 +533,7 @@
                       "S": "APRIL"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -549,7 +549,7 @@
                       "S": "MAY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -565,7 +565,7 @@
                       "S": "JUNE"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -581,7 +581,7 @@
                       "S": "JULY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -597,7 +597,7 @@
                       "S": "AUGUST"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -613,7 +613,7 @@
                       "S": "SEPTEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -629,7 +629,7 @@
                       "S": "OCTOBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -645,7 +645,7 @@
                       "S": "NOVEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -661,7 +661,7 @@
                       "S": "DECEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -677,7 +677,7 @@
                       "S": "JANUARY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -693,7 +693,7 @@
                       "S": "FEBRUARY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -709,7 +709,7 @@
                       "S": "MARCH"
                     },
                     "DataType": {
-                      "S": "double"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -729,7 +729,7 @@
                       "S": "DLR_CD"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "string"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -921,7 +921,7 @@
                       "S": "DOM"
                     },
                     "DataType": {
-                      "S": "double"
+                      "S": "string"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -957,7 +957,7 @@
                       "S": "DLR_CD"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "string"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -989,7 +989,7 @@
                       "S": "APRIL"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1005,7 +1005,7 @@
                       "S": "MAY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1021,7 +1021,7 @@
                       "S": "JUNE"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1037,7 +1037,7 @@
                       "S": "JULY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1053,7 +1053,7 @@
                       "S": "AUGUST"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1069,7 +1069,7 @@
                       "S": "SEPTEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1085,7 +1085,7 @@
                       "S": "OCTOBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1101,7 +1101,7 @@
                       "S": "NOVEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1117,7 +1117,7 @@
                       "S": "DECEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1133,7 +1133,7 @@
                       "S": "JANUARY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1149,7 +1149,7 @@
                       "S": "FEBRUARY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1165,7 +1165,7 @@
                       "S": "MARCH"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1201,7 +1201,7 @@
                       "S": "DLR_CD"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "string"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1233,7 +1233,7 @@
                       "S": "APRIL"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1249,7 +1249,7 @@
                       "S": "MAY"
                     },
                     "DataType": {
-                      "S": "double"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1265,7 +1265,7 @@
                       "S": "JUNE"
                     },
                     "DataType": {
-                      "S": "double"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1281,7 +1281,7 @@
                       "S": "JULY"
                     },
                     "DataType": {
-                      "S": "double"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1297,7 +1297,7 @@
                       "S": "AUGUST"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1313,7 +1313,7 @@
                       "S": "SEPTEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1329,7 +1329,7 @@
                       "S": "OCTOBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1345,7 +1345,7 @@
                       "S": "NOVEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1361,7 +1361,7 @@
                       "S": "DECEMBER"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1377,7 +1377,7 @@
                       "S": "JANUARY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1393,7 +1393,7 @@
                       "S": "FEBRUARY"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
@@ -1409,7 +1409,7 @@
                       "S": "MARCH"
                     },
                     "DataType": {
-                      "S": "int"
+                      "S": "float"
                     },
                     "DropColumn": {
                       "BOOL": false
