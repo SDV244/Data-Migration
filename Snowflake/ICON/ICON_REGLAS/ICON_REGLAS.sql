@@ -1,8 +1,8 @@
 CREATE OR REPLACE TABLE ICON_REGLAS (
-    NEW_POSITION STRING,
-    POSITION_TYPE STRING,
-    STORE_SIZE STRING,
-    MINIMUM_REQUIRED_STAFF INT,
+    NEW_POSITION VARCHAR(150) AS NEW_PSTN_DS,
+    POSITION_TYPE VARCHAR(50) AS PSTN_TYP_DS,
+    STORE_SIZE VARCHAR(50) AS STOR_SIZE_DS,
+    MINIMUM_REQUIRED_STAFF NUMBER AS MNM_RQRD_STF_NB,
     HashKey STRING,              -- Added column for unique row identifier or hash
     audit_loaded_date TIMESTAMP  -- Added column for tracking when the row was loaded
 );
