@@ -1,0 +1,302 @@
+CREATE OR REPLACE PIPE SDDBMTS1.NMX_MTS1_STG.DLR_PRFMNC_SG_PIPE 
+AUTO_INGEST = TRUE 
+AS COPY INTO SDDBMTS1.NMX_MTS1_STG.DLR_PRFMNC_SG (
+    FSCL_YR_NB,
+    FSCL_MNTH_NB,
+    DLR_CD,
+    ARA_IN_NM,
+    IN_NM,
+    SGN_IN_DS,
+    NMRTR_MSR_NB,
+    DNMNTR_MSR_NB,
+    ACTL_CMPLNC_NB,
+    IN_OBJCTV_NB,
+    CMPLNC_OF_OBJCTV_PC,
+    HASHKEY,
+    AUDIT_LOADED_DATE
+) FROM (
+    SELECT
+        $1::NUMBER AS FSCL_YR_NB,
+        $2::NUMBER AS FSCL_MNTH_NB,
+        $3::VARCHAR(4) AS DLR_CD,
+        $4::VARCHAR(55) AS ARA_IN_NM,
+        $5::VARCHAR(55) AS IN_NM,
+        $6::VARCHAR(1) AS SGN_IN_DS,
+        $7::NUMBER(12,2) AS NMRTR_MSR_NB,
+        $8::NUMBER(12,2) AS DNMNTR_MSR_NB,
+        $9::NUMBER(12,2) AS ACTL_CMPLNC_NB,
+        $10::NUMBER(12,2) AS IN_OBJCTV_NB,
+        $11::NUMBER(12,6) AS CMPLNC_OF_OBJCTV_PC,
+        $12::STRING AS HASHKEY,
+        $13::TIMESTAMP AS AUDIT_LOADED_DATE
+    FROM '@NMEX_MAP_EXT_STG/validated/ICON/indicadores dealer'
+) FILE_FORMAT = (
+    TYPE = 'CSV',
+    FIELD_DELIMITER = ';',
+    SKIP_HEADER = 1,
+    DATE_FORMAT = 'AUTO',
+    TIMESTAMP_FORMAT = 'AUTO',
+    NULL_IF = ('NULL', '','NaN','nan','NAN'),
+    TRIM_SPACE = TRUE
+) ON_ERROR = 'CONTINUE';
+
+
+CREATE OR REPLACE PIPE SDDBMTS1.NMX_MTS1_STG.SVC_MNTHLY_ORDR_SG_PIPE 
+AUTO_INGEST = TRUE 
+AS COPY INTO SDDBMTS1.NMX_MTS1_STG.SVC_MNTHLY_ORDR_SG (
+    FSCL_YR_NB,
+    DLR_CD,
+    DLR_NM,
+    DLR_GRP_NM,
+    VLU_1_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_2_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_3_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_4_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_5_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_6_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_7_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_8_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_9_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_10_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_11_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_12_ORDR_PBLC_WRNTY_INTRNL_NB,
+    VLU_1_ORDR_PBLC_WRNTY_NB,
+    VLU_2_ORDR_PBLC_WRNTY_NB,
+    VLU_3_ORDR_PBLC_WRNTY_NB,
+    VLU_4_ORDR_PBLC_WRNTY_NB,
+    VLU_5_ORDR_PBLC_WRNTY_NB,
+    VLU_6_ORDR_PBLC_WRNTY_NB,
+    VLU_7_ORDR_PBLC_WRNTY_NB,
+    VLU_8_ORDR_PBLC_WRNTY_NB,
+    VLU_9_ORDR_PBLC_WRNTY_NB,
+    VLU_10_ORDR_PBLC_WRNTY_NB,
+    VLU_11_ORDR_PBLC_WRNTY_NB,
+    VLU_12_ORDR_PBLC_WRNTY_NB,
+    HASHKEY,
+    AUDIT_LOADED_DATE
+) FROM (
+    SELECT
+        $1::NUMBER AS FSCL_YR_NB,
+        $2::VARCHAR(4) AS DLR_CD,
+        $3::VARCHAR(150) AS DLR_NM,
+        $4::VARCHAR(55) AS DLR_GRP_NM,
+        $5::NUMBER(12,2) AS VLU_1_ORDR_PBLC_WRNTY_INTRNL_NB,   -- April
+        $6::NUMBER(12,2) AS VLU_2_ORDR_PBLC_WRNTY_INTRNL_NB,   -- May
+        $7::NUMBER(12,2) AS VLU_3_ORDR_PBLC_WRNTY_INTRNL_NB,   -- June
+        $8::NUMBER(12,2) AS VLU_4_ORDR_PBLC_WRNTY_INTRNL_NB,   -- July
+        $9::NUMBER(12,2) AS VLU_5_ORDR_PBLC_WRNTY_INTRNL_NB,   -- August
+        $10::NUMBER(12,2) AS VLU_6_ORDR_PBLC_WRNTY_INTRNL_NB,  -- September
+        $11::NUMBER(12,2) AS VLU_7_ORDR_PBLC_WRNTY_INTRNL_NB,  -- October
+        $12::NUMBER(12,2) AS VLU_8_ORDR_PBLC_WRNTY_INTRNL_NB,  -- November
+        $13::NUMBER(12,2) AS VLU_9_ORDR_PBLC_WRNTY_INTRNL_NB,  -- December
+        $14::NUMBER(12,2) AS VLU_10_ORDR_PBLC_WRNTY_INTRNL_NB, -- January
+        $15::NUMBER(12,2) AS VLU_11_ORDR_PBLC_WRNTY_INTRNL_NB, -- February
+        $16::NUMBER(12,2) AS VLU_12_ORDR_PBLC_WRNTY_INTRNL_NB, -- March
+        $17::NUMBER(12,2) AS VLU_1_ORDR_PBLC_WRNTY_NB,         -- April
+        $18::NUMBER(12,2) AS VLU_2_ORDR_PBLC_WRNTY_NB,         -- May
+        $19::NUMBER(12,2) AS VLU_3_ORDR_PBLC_WRNTY_NB,         -- June
+        $20::NUMBER(12,2) AS VLU_4_ORDR_PBLC_WRNTY_NB,         -- July
+        $21::NUMBER(12,2) AS VLU_5_ORDR_PBLC_WRNTY_NB,         -- August
+        $22::NUMBER(12,2) AS VLU_6_ORDR_PBLC_WRNTY_NB,         -- September
+        $23::NUMBER(12,2) AS VLU_7_ORDR_PBLC_WRNTY_NB,         -- October
+        $24::NUMBER(12,2) AS VLU_8_ORDR_PBLC_WRNTY_NB,         -- November
+        $25::NUMBER(12,2) AS VLU_9_ORDR_PBLC_WRNTY_NB,         -- December
+        $26::NUMBER(12,2) AS VLU_10_ORDR_PBLC_WRNTY_NB,        -- January
+        $27::NUMBER(12,2) AS VLU_11_ORDR_PBLC_WRNTY_NB,        -- February
+        $28::NUMBER(12,2) AS VLU_12_ORDR_PBLC_WRNTY_NB,        -- March
+        $29::STRING AS HASHKEY,
+        $30::TIMESTAMP AS AUDIT_LOADED_DATE
+    FROM '@NMEX_MAP_EXT_STG/validated/ICON/avg ors mensual'
+) FILE_FORMAT = (
+    TYPE = 'CSV',
+    FIELD_DELIMITER = ';',
+    SKIP_HEADER = 1,
+    DATE_FORMAT = 'AUTO',
+    TIMESTAMP_FORMAT = 'AUTO',
+    NULL_IF = ('NULL', '','NaN','nan','NAN'),
+    TRIM_SPACE = TRUE
+) ON_ERROR = 'CONTINUE';
+
+
+
+CREATE OR REPLACE PIPE SDDBMTS1.NMX_MTS1_STG.BSNS_ARA_RQRD_PRSN_SG_PIPE 
+AUTO_INGEST = TRUE 
+AS COPY INTO SDDBMTS1.NMX_MTS1_STG.BSNS_ARA_RQRD_PRSN_SG (
+    NEW_PSTN_DS,
+    PSTN_TYP_DS,
+    STOR_SIZE_DS,
+    MNM_RQRD_STF_NB,
+    HASHKEY,
+    AUDIT_LOADED_DATE
+) FROM (
+    SELECT
+        $1::VARCHAR(150) AS NEW_PSTN_DS,
+        $2::VARCHAR(50) AS PSTN_TYP_DS,
+        $3::VARCHAR(50) AS STOR_SIZE_DS,
+        $4::NUMBER AS MNM_RQRD_STF_NB,
+        $5::STRING AS HASHKEY,
+        $6::TIMESTAMP AS AUDIT_LOADED_DATE
+    FROM '@NMEX_MAP_EXT_STG/validated/ICON/reglas'
+) FILE_FORMAT = (
+    TYPE = 'CSV',
+    FIELD_DELIMITER = ';',
+    SKIP_HEADER = 1,
+    DATE_FORMAT = 'AUTO',
+    TIMESTAMP_FORMAT = 'AUTO',
+    NULL_IF = ('NULL', '','NaN','nan','NAN'),
+    TRIM_SPACE = TRUE
+) ON_ERROR = 'CONTINUE';
+
+
+CREATE OR REPLACE PIPE SDDBMTS1.NMX_MTS1_STG.SLS_POWN_MNTHLY_OBJCTV_SG_PIPE  
+AUTO_INGEST = TRUE 
+AS COPY INTO SDDBMTS1.NMX_MTS1_STG.SLS_POWN_MNTHLY_OBJCTV_SG (
+    FSCL_YR_NB,
+    DLR_CD,
+    DLR_NM,
+    VLU_1_NB,
+    VLU_2_NB,
+    VLU_3_NB,
+    VLU_4_NB,
+    VLU_5_NB,
+    VLU_6_NB,
+    VLU_7_NB,
+    VLU_8_NB,
+    VLU_9_NB,
+    VLU_10_NB,
+    VLU_11_NB,
+    VLU_12_NB,
+    HASHKEY,
+    AUDIT_LOADED_DATE
+) FROM (
+    SELECT
+        $1::NUMBER AS FSCL_YR_NB,
+        $2::VARCHAR(150) AS DLR_CD,         -- Changed to VARCHAR(150) to match table definition
+        $3::VARCHAR(150) AS DLR_NM,
+        $4::NUMBER(12,2) AS VLU_1_NB,   -- April
+        $5::NUMBER(12,2) AS VLU_2_NB,   -- May
+        $6::NUMBER(12,2) AS VLU_3_NB,   -- June
+        $7::NUMBER(12,2) AS VLU_4_NB,   -- July
+        $8::NUMBER(12,2) AS VLU_5_NB,   -- August
+        $9::NUMBER(12,2) AS VLU_6_NB,   -- September
+        $10::NUMBER(12,2) AS VLU_7_NB,  -- October
+        $11::NUMBER(12,2) AS VLU_8_NB,  -- November
+        $12::NUMBER(12,2) AS VLU_9_NB,  -- December
+        $13::NUMBER(12,2) AS VLU_10_NB, -- January
+        $14::NUMBER(12,2) AS VLU_11_NB, -- February
+        $15::NUMBER(12,2) AS VLU_12_NB, -- March
+        $16::STRING AS HASHKEY,
+        $17::TIMESTAMP AS AUDIT_LOADED_DATE
+    FROM '@NMEX_MAP_EXT_STG/validated/ICON/obj ventas nic'
+) FILE_FORMAT = (
+    TYPE = 'CSV',
+    FIELD_DELIMITER = ';',
+    SKIP_HEADER = 1,
+    DATE_FORMAT = 'AUTO',
+    TIMESTAMP_FORMAT = 'AUTO',
+    NULL_IF = ('NULL', '','NaN','nan','NAN'),
+    TRIM_SPACE = TRUE
+) ON_ERROR = 'CONTINUE';
+
+
+CREATE OR REPLACE PIPE NMX_MTS1_STG.OPRTNY_BSNS_DVLPMT_CTR_MNTHLY_OBJCTV_SG_PIPE 
+AUTO_INGEST = TRUE 
+AS COPY INTO NMX_MTS1_STG.OPRTNY_BSNS_DVLPMT_CTR_MNTHLY_OBJCTV_SG (
+    FSCL_YR_NB,
+    DLR_CD,
+    DLR_NM,
+    VLU_1_NB,
+    VLU_2_NB,
+    VLU_3_NB,
+    VLU_4_NB,
+    VLU_5_NB,
+    VLU_6_NB,
+    VLU_7_NB,
+    VLU_8_NB,
+    VLU_9_NB,
+    VLU_10_NB,
+    VLU_11_NB,
+    VLU_12_NB,
+    HASHKEY,
+    AUDIT_LOADED_DATE
+) FROM (
+    SELECT
+        $1::NUMBER AS FSCL_YR_NB,
+        $2::VARCHAR(4) AS DLR_CD,
+        $3::VARCHAR(150) AS DLR_NM,   -- "dstrbr" in the file will map to DLR_NM
+        $4::NUMBER(12,2) AS VLU_1_NB,   -- "april" in the file
+        $5::NUMBER(12,2) AS VLU_2_NB,   -- "may" in the file
+        $6::NUMBER(12,2) AS VLU_3_NB,   -- "june" in the file
+        $7::NUMBER(12,2) AS VLU_4_NB,   -- "july" in the file
+        $8::NUMBER(12,2) AS VLU_5_NB,   -- "august" in the file
+        $9::NUMBER(12,2) AS VLU_6_NB,   -- "september" in the file
+        $10::NUMBER(12,2) AS VLU_7_NB,  -- "october" in the file
+        $11::NUMBER(12,2) AS VLU_8_NB,  -- "november" in the file
+        $12::NUMBER(12,2) AS VLU_9_NB,  -- "december" in the file
+        $13::NUMBER(12,2) AS VLU_10_NB, -- "january" in the file
+        $14::NUMBER(12,2) AS VLU_11_NB, -- "february" in the file
+        $15::NUMBER(12,2) AS VLU_12_NB, -- "march" in the file
+        $16::STRING AS HASHKEY,         -- "HashKey" in the file
+        $17::TIMESTAMP AS AUDIT_LOADED_DATE  -- "audit_loaded_date" in the file
+    FROM '@NMEX_MAP_EXT_STG/validated/ICON/oportunidades bdc posventa'
+) FILE_FORMAT = (
+    TYPE = 'CSV',
+    FIELD_DELIMITER = ';',
+    SKIP_HEADER = 1,
+    DATE_FORMAT = 'AUTO',
+    TIMESTAMP_FORMAT = 'AUTO',
+    NULL_IF = ('NULL', '','NaN','nan','NAN'),
+    TRIM_SPACE = TRUE
+) ON_ERROR = 'CONTINUE';
+
+
+
+CREATE OR REPLACE PIPE NMX_MTS1_STG.CMPLNC_STRCTR_ORGNZN_DLR_SG_PIPE  
+AUTO_INGEST = TRUE 
+AS 
+COPY INTO NMX_MTS1_STG.CMPLNC_STRCTR_ORGNZN_DLR_SG (
+    DLR_CD,
+    DLR_NM,
+    DLR_GRP_NM,
+    DLR_ZN_NM,
+    SLS_DS,
+    AFTR_SLS_DS,
+    POWN_DS,
+    FLT_DS,
+    MGMT_BSNS_ARA_DS,
+    SHT_MTL_PAINTING_BSNS_DS,
+    WHLSL_DS,
+    FOM_NM,
+    DOM_NM,
+    HASHKEY,
+    AUDIT_LOADED_DATE
+) 
+FROM (
+    SELECT
+        $1::VARCHAR(4) AS DLR_CD,       -- Changed to VARCHAR(4) to match table definition
+        $2::VARCHAR(150) AS DLR_NM,
+        $3::VARCHAR(55) AS DLR_GRP_NM,
+        $4::VARCHAR(55) AS DLR_ZN_NM,
+        $5::VARCHAR(50) AS SLS_DS,
+        $6::VARCHAR(50) AS AFTR_SLS_DS,
+        $7::VARCHAR(50) AS POWN_DS,
+        $8::VARCHAR(50) AS FLT_DS,
+        $9::VARCHAR(50) AS MGMT_BSNS_ARA_DS,
+        $10::VARCHAR(50) AS SHT_MTL_PAINTING_BSNS_DS,
+        $11::VARCHAR(50) AS WHLSL_DS,
+        $12::VARCHAR(55) AS FOM_NM,
+        $13::VARCHAR(55) AS DOM_NM,
+        $14::STRING AS HASHKEY,
+        $15::TIMESTAMP AS AUDIT_LOADED_DATE
+    FROM '@NMEX_MAP_EXT_STG/validated/ICON/dealers'
+)
+FILE_FORMAT = (
+    TYPE = 'CSV',
+    FIELD_DELIMITER = ';',
+    SKIP_HEADER = 1,
+    DATE_FORMAT = 'AUTO',
+    TIMESTAMP_FORMAT = 'AUTO',
+    NULL_IF = ('NULL', '','NaN','nan','NAN'),
+    TRIM_SPACE = TRUE
+)
+ON_ERROR = 'CONTINUE';
